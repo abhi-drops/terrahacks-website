@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* add color hex codes when picked */
+:root {
+    /* --background-color: #F5FAFA;
+    --foreground-color: #1E1E1E;
+    --highlight-color: #3E8989;
+    --highlight-dark-color: #002956; */
+}
+
+/* Set bg color and margins */
+html {
+    /* background-color: var(--usstm-background); */
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    position: relative;
+    max-width: 1440px;
+    height: 100%;
+    margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}

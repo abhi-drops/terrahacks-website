@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "label": "About",
+        "sectionId": "about"
+    },
+    {
+        "id": 2,
+        "label": "Sponsors",
+        "sectionId": "sponsors"
+    },
+    {
+        "id": 3,
+        "label": "FAQ",
+        "sectionId": "faq"
+    },
+    {
+        "id": 4,
+        "label": "The Team",
+        "sectionId": "team"
+    },
+    {
+        "id": 5,
+        "label": "Contact",
+        "sectionId": "contact"
+    }
+]
