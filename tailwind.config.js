@@ -13,7 +13,8 @@ module.exports = {
         },
       },
       backgroundImage: {
-        "hero-section": "url('/backgrounds/intro.png')",
+        "hero-section": "url('/assets/backgrounds/intro.png')",
+        "hero-section-mobile": "url('/assets/backgrounds/intro-mobile.png')",
       },
     },
   },

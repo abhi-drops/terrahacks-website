@@ -1,9 +1,12 @@
 "use client";
-import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+import { Spin as Hamburger } from 'hamburger-react';
+import { useClickAway } from 'react-use';
+import NavbarLogo from "@/app/_components/navbar-logo";
 
 export default function Navbar() {
     const [navItems, setNavItems] = useState([]);
+    const [isExpandedMobile, setIsExpandedMobile] = useState(false);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -19,29 +22,22 @@ export default function Navbar() {
         fetchData();
     }, []);
 
+    // For closing the dropdown menu when clicking outside of it
+    const ref = useRef(null);
+    useClickAway(ref, () => {
+        setIsExpandedMobile(false);
+    });
+
     return (
         <>
-            <nav id="website-nav" className="hidden w-full lg:flex flex-row bg-transparent backdrop-blur-md text-black font-medium px-10 py-3 fixed justify-between z-50">
+            <nav id="website-nav" className="hidden lg:flex flex-row w-full bg-transparent backdrop-blur-md text-white font-medium px-10 py-3 fixed justify-between z-50">
                 <div id="nav-items" className="flex flex-row">
                     <ul className="flex justify-center w-full items-center gap-12 ml-4">
                         <li>
-                            <button onClick={() => {
-                                document.scrollingElement.scrollTo({ top: 0, behavior: "smooth" });
-                            }}
-                            >
-                                <Image
-                                    src="/th_logo.png"
-                                    alt="TerraHacks Logo - Redirects to Home"
-                                    width={1000}
-                                    height={1000}
-                                    priority={true}
-                                    className="w-16 h-16 hover:animate-spin"
-                                    style={{ animationDuration: "2s"}}
-                                />
-                            </button>
+                            <NavbarLogo />
                         </li>
                         {navItems.map((item, index) => (
-                            <li className="text-md xl:text-xl" key={index}>
+                            <li className="text-md lg:text-xl xl:text-2xl" key={index}>
                                 <button className="hover:text-brown-300 transition-colors duration-300"
                                     onClick={() => {
                                         var elem = document.getElementById(item.sectionId).offsetTop;
@@ -55,18 +51,54 @@ export default function Navbar() {
                         ))}
                     </ul>
                 </div>
-                <div id="portal-btn" className="flex flex-row items-center">
+                <div id="portal-btn" className="flex flex-row items-center text-lg xl:text-xl">
                     <button
-                        className="bg-green-500 text-white font-semibold px-4 py-2 rounded-md shadow-md hover:bg-green-600 transition-colors duration-300"
-                        onClick={() => {console.log("Redirecting to Application Portal")}}
+                        className="bg-green-500 text-white font-semibold px-6 py-4 rounded-md shadow-md border border-blue-300 hover:bg-green-600 transition-colors duration-300"
+                        onClick={() => {
+                            window.open("https://portal.terrahacks.ca", "_blank");
+                        }}
                     >
-                        <a href="https://portal.terrahacks.ca" target="_blank" className="w-full h-full">Application Portal</a>
+                        Application Portal
                     </button>
                 </div>
             </nav>
-            <nav id="mobile-nav">
-
+            <nav id="mobile-nav" ref={ref} className={`flex lg:hidden flex-row w-full backdrop-blur-mobile text-white font-medium px-5 lg:px-10 py-3 fixed justify-between h-16 z-50`}>
+                <NavbarLogo />
+                <Hamburger
+                    toggled={isExpandedMobile}
+                    toggle={setIsExpandedMobile}
+                    duration={0.5}
+                    rounded
+                    color="#fff"
+                    size={28}
+                />
+                {typeof document !== 'undefined' && (isExpandedMobile ? document.body.classList.add("overflow-hidden") : document.body.classList.remove("overflow-hidden"))}
+                {isExpandedMobile && (
+                    <div id="mobile-nav-items" className="flex flex-col w-full absolute text-white space-y-4 gap-4 top-0 right-0 h-screen items-center mt-16 pt-4 backdrop-blur-mobile">
+                        <button
+                            className="bg-green-500 text-white font-semibold px-6 py-4 rounded-md shadow-md border border-blue-300 hover:bg-green-600 transition-colors duration-300"
+                            onClick={() => {
+                                window.open("https://portal.terrahacks.ca", "_blank");
+                            }}
+                        >
+                            Application Portal
+                        </button>
+                        {navItems.map((item, index) => (
+                            <button className="text-xl hover:text-brown-300 transition-colors duration-300" key={index}
+                                onClick={() => {
+                                    var elem = document.getElementById(item.sectionId).offsetTop;
+                                    window.scrollTo({ top: elem - 100, behavior: "smooth" });
+                                    setIsExpandedMobile(false);
+                                    console.log(item.sectionId);
+                                }}
+                            >
+                                {item.label}
+                            </button>
+                        ))}
+                    </div>
+                )}
             </nav>
+
         </>
 
     );

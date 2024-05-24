@@ -25,3 +25,14 @@ html {
     padding-left: 1rem;
     padding-right: 1rem;
 }
+
+/* Custom CSS */
+.backdrop-blur-mobile {
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+}
+
+.backdrop-blur-nav-items {
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+}

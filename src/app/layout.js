@@ -10,7 +10,7 @@ export const metadata = {
   description: "A student-run Hackathon for students to learn and apply their knowledge - Coming Summer 2024 at TMU!",
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }) {  
   return (
     <html lang="en">
       <body className={inter.className}>
