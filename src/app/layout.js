@@ -1,19 +1,23 @@
-import { Inter } from "next/font/google";
+import { Laila } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/app/_components/navbar";
+import Navbar from "@/app/_components/navbar/navbar";
 import Footer from "@/app/_components/footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const laila = Laila({ 
+  subsets: ["latin"],
+  weight: ['300', '400', '500', '600', '700'] 
+});
+
 
 export const metadata = {
-  title: "TerraHacks 2024",
+  title: "TerraHacks",
   description: "A student-run Hackathon for students to learn and apply their knowledge - Coming Summer 2024 at TMU!",
 };
 
 export default function RootLayout({ children }) {  
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={laila.className}>
         <Navbar />
         {children}
         <Footer />
