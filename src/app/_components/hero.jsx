@@ -12,11 +12,11 @@ export default function Hero() {
                     className='mx-auto mt-48 w-[90%] lg:w-[75%] h-full z-20'
                 />
                 <Image
-                    src="/assets/sign-test.png"
+                    src="/assets/new-sign.png"
                     alt="TerraHacks Sign"
                     width={1000}
                     height={1000}
-                    className='absolute right-[5%] bottom-[8%] w-[15%] h-auto z-20'
+                    className='absolute right-[5%] bottom-[17.5%] w-[15%] h-auto z-20'
                 />
         </div>
     )
