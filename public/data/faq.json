@@ -1,0 +1,38 @@
+[
+    {
+        "id" : 1 , 
+        "question" : "How big can my team size be?", 
+        "answer": "Your team can be upto 4 People! If you don't have a group, we can help you find one after the opening ceremony!"
+    }, 
+    {
+        "id" : 2, 
+        "question" : "Who can attend TerraHacks?", 
+        "answer": "If you are over the age of 18 and enrolled in any educational institution, then you are eligible to apply for TerraHacks!"
+    },
+    {
+        "id" : 3, 
+        "question" : "Am I able to stay overnight?", 
+        "answer" : "Yes! You are encouraged to! There'll be events, food, and networking opportunities. Exact specifics will be disclosed closer to the hackathon."
+    }, 
+    {
+        "id" : 4, 
+        "question" : "What do I need to participate? ", 
+        "answer" : "TerraHacks will be held in-person. It is heavily reccomend bringing a laptop, an eager attitude, and maybe a water bottle :) "
+    }, 
+    {
+        "id" : 5, 
+        "question": "How much does it cost?", 
+        "answer" : "It costs nothing! The least you'll need is your own laptop to code on!"
+    }, 
+    {
+        "id" : 6, 
+        "question": "Do I need prior coding experience to attend?", 
+        "answer" : "Absolutely not! TerraHacks prides itself on being friendly and open to all skill levels. You could have started coding yesterday, and you'd still be welcome!"
+    }, 
+    {
+        "id" : 7, 
+        "question" : "", 
+        "answer" : ""
+    }
+
+]
