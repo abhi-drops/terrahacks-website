@@ -16,12 +16,12 @@
     },
     {
         "id": 4,
-        "label": "The Team",
-        "sectionId": "team"
+        "label": "Contact",
+        "sectionId": "contact"
     },
     {
         "id": 5,
-        "label": "Contact",
-        "sectionId": "contact"
+        "label": "The Team",
+        "sectionId": "team"
     }
 ]
