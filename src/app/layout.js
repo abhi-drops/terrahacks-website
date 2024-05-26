@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
       <body className={laila.className}>
         <Navbar />
         {children}
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );

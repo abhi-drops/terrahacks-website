@@ -1,5 +1,5 @@
 import Image from "next/image";
-import HeaderRight from "../header-right.jsx";
+import HeaderRight from "../headers/headerRight.jsx";
 export default function FAQ() {
     return (
         <>

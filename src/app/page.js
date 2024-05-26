@@ -5,11 +5,11 @@ import FAQ from "@/app/_components/sections/faq";
 
 export default function Home() {
   return (
-    <main>
+    <main className="relative bg-phone-image pb-[140%] lg:bg-laptop-image 3xl:bg-full-image lg:pb-[378%] 3xl:pb-[280%] bg-cover bg-no-repeat bg-center">
       <Hero />
       <About />
-      <Sponsors /> 
-      <FAQ />
+      {/* <Sponsors /> 
+      <FAQ /> */}
     </main>
   );
 }

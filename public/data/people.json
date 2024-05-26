@@ -1,132 +1,125 @@
 [
     {
-        "id": 1,
-        "name": "John Doe",
-        "position": "Software Engineer",
-        "commitee": "Admin", 
-        "img": "name.png"
-    }, 
-    {
-        "id": 2, 
+        "id": 1, 
         "name": "Prachi Patel", 
         "position": "Co-Chair", 
         "commitee": "Admin", 
         "img": "name.png"
     }, 
     {
-        "id": 3, 
+        "id": 2, 
         "name": "Mark Paul", 
         "position": "Co-Chair", 
         "commitee": "Admin", 
         "img": "name.png"
     }, 
     {
-        "id": 4, 
+        "id": 3, 
         "name": "Mo Nakouzi", 
         "position": "Hacker Manager", 
         "commitee": "Admin", 
         "img": "name.png"
     }, 
     {
-        "id": 5, 
+        "id": 4, 
         "name": "Kai Adams", 
         "position": "Prize Coordinator", 
         "commitee": "Logistics and Ops", 
         "img": "name.png"
     }, 
     {
-        "id": 6, 
+        "id": 5, 
         "name": "Diva Luna", 
         "position": "Website Designer", 
         "commitee": "Technology", 
         "img": "name.png"
     }, 
     {
-        "id": 7, 
+        "id": 6, 
         "name": "William Khine", 
         "position": "Website Lead", 
         "commitee": "Technology", 
         "img": "name.png"
     }, 
     {
-        "id": 8, 
+        "id": 7, 
         "name": "Benson Zhang", 
         "position": "Volunteer Coordinator", 
         "commitee": "Day-of", 
         "img": "name.png"
     }, 
     {
-        "id": 9, 
+        "id": 8, 
         "name": "Saadia Shahid", 
         "position": "Website Designer", 
         "commitee": "Technology", 
-        "img": "name.png"
+        "img": "saadia.jpg"
     }, 
     {
-        "id": 10, 
+        "id": 9, 
         "name": "Nicole Luu", 
         "position": "Website Designer", 
         "commitee": "Technology", 
         "img": "name.png"
     }, 
     {
-        "id": 11, 
+        "id": 10, 
         "name": "Ashwin Sundaresan", 
         "position": "Budgeting Officer", 
         "commitee": "Finance and Sponsorships", 
         "img": "name.png"
     }, 
     {
-        "id": 12, 
+        "id": 11, 
         "name": "Andre Arcaina", 
         "position": "Budgeting Officer", 
         "commitee": "Finance and Sponsorships", 
-        "img": "name.png"
+        "img": "andre.png"
     }, 
     {
-        "id": 13, 
+        "id": 12, 
         "name": "Basith Abdul", 
         "position": "Volunteer Coordinator", 
         "commitee": "Day-of", 
         "img": "name.png"
     }, 
     {
-        "id": 14, 
+        "id": 13, 
         "name": "Aaron Ha", 
         "position": "Swag Coordinator", 
         "commitee": "Logistics and Ops", 
         "img": "name.png"
     }, 
     {
-        "id": 15, 
+        "id": 14, 
         "name": "Zil Pavdighada", 
         "position": "Participant Facilitator", 
         "commitee": "Judging", 
         "img": "name.png"
     },
     {
-        "id": 16, 
+        "id": 15, 
         "name": "Maleeha Mirza", 
         "position": "Sponsorship Coordinator", 
         "commitee": "Finance and Sponsorships", 
         "img": "name.png"
     },  
     {
-        "id": 17, 
+        "id": 16, 
         "name": "Beenish Saeed", 
         "position": "Photographer", 
         "commitee": "Marketing", 
         "img": "name.png"
     },  
     {
-        "id": 18, 
+        "id": 17, 
         "name": "Amasha Malawiya Arachchige", 
         "position": "Volunteer Coordinator", 
         "commitee": "Day-of", 
         "img": "name.png"
     }, 
     {
-        "id": 19, 
+        "id": 18, 
         "name": "Yuze Situ", 
         "position": "Social Media Designer", 
         "commitee": "Marketing", 

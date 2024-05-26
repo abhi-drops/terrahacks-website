@@ -1,5 +1,6 @@
 import Image from "next/image";
-import HeaderLeft from "../header-left.jsx";
+import HeaderLeft from "../headers/headerLeft.jsx";
+
 export default function Sponsors() {
     return (
         <>
