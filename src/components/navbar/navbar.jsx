@@ -31,14 +31,14 @@ export default function Navbar() {
 
     return (
         <>
-            <nav id="website-nav" className="hidden lg:flex flex-row w-full bg-transparent backdrop-blur-laptop text-white font-medium px-10 py-3 3xl:px-20 3xl:py-10 fixed justify-between z-50">
+            <nav id="website-nav" className="hidden lg:flex flex-row w-full bg-transparent backdrop-blur-laptop text-white font-medium px-10 py-3 fixed justify-between z-50">
                 <div id="nav-items" className="flex flex-row">
-                    <ul className="flex justify-center w-full items-center gap-12 3xl:gap-24 ml-4">
+                    <ul className="flex justify-center w-full items-center gap-12 2xl:gap-16 ml-4">
                         <li>
                             <NavbarLogo />
                         </li>
                         {navItems.map((item, index) => (
-                            <li className="text-md lg:text-xl xl:text-2xl 3xl:text-5xl" key={index}>
+                            <li className="text-md lg:text-xl xl:text-2xl 2xl:text-2xl" key={index}>
                                 <button className="hover:text-brown-300 transition-colors duration-300"
                                     onClick={() => {
                                         var elem = document.getElementById(item.sectionId).offsetTop;

@@ -1,11 +1,11 @@
-import Hero from "@/app/_components/sections/hero";
-import About from "@/app/_components/sections/about";
-import Sponsors from "@/app/_components/sections/sponsors";
-import FAQ from "@/app/_components/sections/faq";
+import Hero from "@/components/sections/hero";
+import About from "@/components/sections/about";
+import Sponsors from "@/components/sections/sponsors";
+import FAQ from "@/components/sections/faq";
 
 export default function Home() {
   return (
-    <main className="relative bg-phone-image pb-[140%] lg:bg-laptop-image 3xl:bg-full-image lg:pb-[378%] 3xl:pb-[280%] bg-cover bg-no-repeat bg-center">
+    <main className="relative bg-phone-image pb-[140%] lg:bg-laptop-image 2xl:bg-full-image lg:pb-[378%] 2xl:pb-[280%] bg-cover bg-no-repeat bg-center">
       <Hero />
       <About />
       {/* <Sponsors /> 

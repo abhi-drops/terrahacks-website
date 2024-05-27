@@ -2,12 +2,12 @@
     {
         "id" : 1 , 
         "question" : "How big can my team size be?", 
-        "answer": "Your team can be upto 4 People! If you don't have a group, we can help you find one after the opening ceremony!"
+        "answer": "You can either work alone or be part of a team up to 4 People! If you don't have a group, we can help you find one after you are selected!"
     }, 
     {
         "id" : 2, 
         "question" : "Who can attend TerraHacks?", 
-        "answer": "If you are over the age of 18 and enrolled in any educational institution, then you are eligible to apply for TerraHacks!"
+        "answer": "If you are over the age of 18 and enrolled in any educational institution, then you are eligible to apply and partake in TerraHacks!"
     },
     {
         "id" : 3, 

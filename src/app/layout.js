@@ -1,7 +1,7 @@
 import { Laila } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/app/_components/navbar/navbar";
-import Footer from "@/app/_components/footer";
+import Navbar from "@/components/navbar/navbar";
+import Footer from "@/components/footer";
 
 const laila = Laila({ 
   subsets: ["latin"],

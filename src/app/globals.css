@@ -46,3 +46,24 @@ html {
 .float-in {
     animation: floatIn 1s ease-out forwards;
 }
+
+@keyframes floatInAbout {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.float-in-about {
+    opacity: 0; /* Ensure the element is initially invisible */
+    transition: opacity 0.5s ease-out; /* Smooth transition for opacity */
+}
+
+.float-in-about-visible {
+    opacity: 1;
+    animation: floatInAbout 1s ease-out forwards;
+}
