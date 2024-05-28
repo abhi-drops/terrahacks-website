@@ -58,12 +58,12 @@ html {
     }
 }
 
-.float-in-about {
+.float-in-section {
     opacity: 0; /* Ensure the element is initially invisible */
     transition: opacity 0.5s ease-out; /* Smooth transition for opacity */
 }
 
-.float-in-about-visible {
+.float-in-section-visible {
     opacity: 1;
     animation: floatInAbout 1s ease-out forwards;
 }
