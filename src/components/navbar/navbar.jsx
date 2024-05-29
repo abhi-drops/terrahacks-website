@@ -17,7 +17,7 @@ export default function Navbar() {
                 setNavItems(data);
             }
             catch (error) {
-                console.error(error);
+                console.error("Failed to fetch navbar items: ", error);
             }
         }
         fetchData();
