@@ -7,7 +7,7 @@
     {
         "id" : 2, 
         "question" : "Where is the event? Is it in person or virtual? Where can I park", 
-        "answer": "The event is at [place]! It'll be in-person, and TMU has plenty of parking available. More specifics will be disclosed closer to the hackathon."
+        "answer": "The event is at Toronto Metropolitan University (TMU) campus in downtown Toronto! It'll be in-person, and TMU has plenty of parking available. More specifics will be disclosed closer to the hackathon."
     },
     {
         "id" : 3, 
@@ -47,7 +47,7 @@
     {
         "id" : 10, 
         "question" : "I've still got questions!",
-        "answer" : "No worries! Just email us at terrahacks@usstm.ca! We'll get back to you as soon as possible about any questions you may have"
+        "answer" : "No worries! Just email us at contact@terrahacks.ca or join the discord community! We'll get back to you as soon as possible about any questions you may have."
     }
 
 ]
