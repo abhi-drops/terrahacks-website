@@ -6,11 +6,12 @@ import Contact from "@/components/sections/contact";
 
 export default function Home() {
   return (
-    <main className="relative bg-phone-image pb-[140%] lg:bg-laptop-image 2xl:bg-full-image lg:pb-[378%] 2xl:pb-[280%] bg-cover bg-no-repeat bg-center">
+    <main className="relative bg-phone-image pb-[140%] lg:bg-laptop-image 2xl:bg-full-image lg:pb-[378%] 2xl:pb-[280%] bg-cover bg-no-repeat bg-center flex-col">
       <Hero />
       <About />
       {/* <Sponsors /> 
       <FAQ /> */}
+      <FAQ />
       <Contact />
     </main>
   );
