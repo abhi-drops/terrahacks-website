@@ -43,7 +43,6 @@ export default function Navbar() {
                                     onClick={() => {
                                         var elem = document.getElementById(item.sectionId).offsetTop;
                                         window.scrollTo({ top: elem - 100, behavior: "smooth" });
-                                        console.log(item.sectionId);
                                     }}
                                 >
                                     {item.label}
@@ -74,7 +73,6 @@ export default function Navbar() {
                                     var elem = document.getElementById(item.sectionId).offsetTop;
                                     window.scrollTo({ top: elem - 100, behavior: "smooth" });
                                     setIsExpandedMobile(false);
-                                    console.log(item.sectionId);
                                 }}
                             >
                                 {item.label}

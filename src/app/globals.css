@@ -17,6 +17,10 @@ html {
     padding: 0;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 .main {
     position: relative;
     max-width: 1440px;
@@ -66,4 +70,13 @@ html {
 .float-in-section-visible {
     opacity: 1;
     animation: floatInAbout 1s ease-out forwards;
+}
+
+.fade-in {
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+}
+
+.fade-in.visible {
+    opacity: 1;
 }
