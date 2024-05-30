@@ -1,12 +1,11 @@
-import { Laila } from "next/font/google";
+import { Open_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar/navbar";
 import Footer from "@/components/footer";
 import Top from "@/components/top";
 
-const laila = Laila({ 
-  subsets: ["latin"],
-  weight: ['300', '400', '500', '600', '700'] 
+const openSans = Open_Sans({ 
+  subsets: ["latin"]
 });
 
 
@@ -22,10 +21,10 @@ export const metadata = {
 export default function RootLayout({ children }) {  
   return (
     <html lang="en">
-      <body className={laila.className}>
+      <body className={openSans.className}>
         <Navbar />
         {children}
-        {/* <Footer /> */}
+        <Footer />
         <Top />
       </body>
     </html>
