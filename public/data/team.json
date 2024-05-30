@@ -11,56 +11,56 @@
         "name": "Mark Paul", 
         "position": "Co-Chair", 
         "commitee": "Admin", 
-        "img": "name.png"
+        "img": "mark.png"
     }, 
     {
         "id": 3, 
         "name": "Mo Nakouzi", 
         "position": "Hacker Manager", 
         "commitee": "Admin", 
-        "img": "name.png"
+        "img": "mo.png"
     }, 
     {
         "id": 4, 
-        "name": "Kai Adams", 
-        "position": "Prize Coordinator", 
-        "commitee": "Logistics and Ops", 
-        "img": "name.png"
+        "name": "Ashlin Fung",
+        "position": "Logistics Lead",
+        "commitee": "Logistics and Ops",
+        "img": "ashlin.png"
     }, 
     {
         "id": 5, 
         "name": "Diva Luna", 
-        "position": "Website Designer", 
+        "position": "Lead Website Designer", 
         "commitee": "Technology", 
-        "img": "name.png"
+        "img": "diva.png"
     }, 
     {
         "id": 6, 
         "name": "William Khine", 
-        "position": "Website Lead", 
+        "position": "Lead Developer", 
         "commitee": "Technology", 
-        "img": "name.png"
+        "img": "william.jpeg"
     }, 
     {
         "id": 7, 
         "name": "Benson Zhang", 
         "position": "Volunteer Coordinator", 
         "commitee": "Day-of", 
-        "img": "name.png"
+        "img": "benson.png"
     }, 
     {
         "id": 8, 
         "name": "Saadia Shahid", 
-        "position": "Website Designer", 
+        "position": "Website Developer", 
         "commitee": "Technology", 
-        "img": "saadia.jpg"
+        "img": "saadia.png"
     }, 
     {
         "id": 9, 
         "name": "Nicole Luu", 
         "position": "Website Designer", 
         "commitee": "Technology", 
-        "img": "name.png"
+        "img": "nicole.png"
     }, 
     {
         "id": 10, 
@@ -81,48 +81,90 @@
         "name": "Basith Abdul", 
         "position": "Volunteer Coordinator", 
         "commitee": "Day-of", 
-        "img": "name.png"
+        "img": "basith.png"
     }, 
     {
         "id": 13, 
         "name": "Aaron Ha", 
         "position": "Swag Coordinator", 
         "commitee": "Logistics and Ops", 
-        "img": "name.png"
+        "img": "aaron.png"
     }, 
     {
         "id": 14, 
-        "name": "Zil Pavdighada", 
-        "position": "Participant Facilitator", 
-        "commitee": "Judging", 
-        "img": "name.png"
+        "name": "Jack Shen",
+        "position": "Sponsorship Coordinator",
+        "commitee": "Finance and Sponsorships",
+        "img": "jack.png"
     },
     {
         "id": 15, 
         "name": "Maleeha Mirza", 
         "position": "Sponsorship Coordinator", 
         "commitee": "Finance and Sponsorships", 
-        "img": "name.png"
+        "img": "maleeha.png"
     },  
     {
         "id": 16, 
         "name": "Beenish Saeed", 
         "position": "Photographer", 
         "commitee": "Marketing", 
-        "img": "name.png"
+        "img": "beenish.png"
     },  
     {
         "id": 17, 
         "name": "Amasha Malawiya Arachchige", 
-        "position": "Volunteer Coordinator", 
-        "commitee": "Day-of", 
-        "img": "name.png"
+        "position": "Event Coordinator", 
+        "commitee": "Logistics and Ops", 
+        "img": "amasha.png"
     }, 
     {
         "id": 18, 
         "name": "Yuze Situ", 
         "position": "Social Media Designer", 
         "commitee": "Marketing", 
+        "img": "yuze.png"
+    },
+    {
+        "id": 19,
+        "name": "Hamid Khoramrokh",
+        "position": "Hackathon Advisor",
+        "commitee": "Admin",
+        "img": "hamid.png"
+    },
+    {
+        "id": 20,
+        "name": "Kai Adams", 
+        "position": "Prize Coordinator", 
+        "commitee": "Logistics and Ops", 
+        "img": "kai.png"
+    },
+    {
+        "id": 21,
+        "name": "Viri Nguyen", 
+        "position": "Participant Facilitator", 
+        "commitee": "Judging", 
+        "img": "viri.png"
+    },
+    {
+        "id": 22,
+        "name": "Krystal Zin",
+        "position": "Social Media Coordinator",
+        "commitee": "Marketing",
+        "img": "krystal.png"
+    },
+    {
+        "id": 23,
+        "name": "Nicholas Caro Lopez",
+        "position": "Lead Developer",
+        "commitee": "Technology",
+        "img": "nicholas.png"
+    },
+    {
+        "id": 24,
+        "name": "Zil Pavdighada",
+        "position": "Participant Facilitator",
+        "commitee": "Judging",
         "img": "name.png"
     }
 ]
