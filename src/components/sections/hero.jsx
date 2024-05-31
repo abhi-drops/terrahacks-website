@@ -20,7 +20,7 @@ export default function Hero() {
                 width={1000}
                 height={1000}
                 priority={true}
-                className='absolute hidden lg:block right-[5%] lg:top-[10.1%] 2xl:top-[8.6%] lg:w-[30%] 2xl:w-[25%] h-auto z-20'
+                className='absolute hidden lg:block right-[5%] lg:top-[10.1%] 2xl:top-[8.9%] lg:w-[30%] 2xl:w-[25%] h-auto z-20'
             />
             <Image
                 src="/assets/signs/sign-mobile.png"
