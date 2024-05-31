@@ -1,36 +1,112 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# TerraHacks Website
 
-## Getting Started
+Welcome to the official repository for the TerraHacks website! This project uses Next.js and Tailwind CSS to create a dynamic and responsive website for the TerraHacks hackathon.
 
-First, run the development server:
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+
+## Introduction
+
+TerraHacks is an annual hackathon focused on promoting innovation and collaboration among developers. This repository contains the source code for the TerraHacks website, which provides information about the event, registration details, schedule, and more.
+
+## Installation
+
+To get started with this project, follow the steps below:
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/yourusername/TerraHacks.git
+   cd TerraHacks
+   ```
+
+2. **Install dependencies:**
+
+   ```bash
+   npm install
+   ```
+
+3. **Run the development server:**
+
+   ```bash
+   npm run dev
+   ```
+
+   Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Usage
+
+### Development
+
+To start the development server, use the following command:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This will run the app in development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser. The page will reload if you make edits. You will also see any lint errors in the console.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### Production
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+To build the app for production, use the following command:
 
-## Learn More
+```bash
+npm run build
+```
 
-To learn more about Next.js, take a look at the following resources:
+This will create an optimized build of the application in the `.next` folder.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To start the production server, use:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```bash
+npm start
+```
 
-## Deploy on Vercel
+## Project Structure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+TerraHacks/
+├── public/           # Static assets
+├── src/componenets   # Reusable components
+├── src/app           # Next.js pages
+├── globals.css       # Global styles (including Tailwind CSS config)
+├── .gitignore        # Git ignore file
+├── next.config.js    # Next.js configuration
+├── .eslintrc.json    # ESLint configuration
+├── package.json      # Project dependencies and scripts
+├── postcss.config.js # PostCSS configuration
+├── README.md         # Project documentation
+└── tailwind.config.js # Tailwind CSS configuration
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Contributing
+
+We welcome contributions to improve the TerraHacks website. To contribute, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch: `git checkout -b feature/your-feature-name`
+3. Make your changes and commit them: `git commit -m 'Add some feature'`
+4. Push to the branch: `git push origin feature/your-feature-name`
+5. Open a pull request.
+
+Please ensure your code adheres to our coding standards and includes appropriate tests.
+
+## License
+
+This project is licensed under the GNU Version 3 License. See the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+If you have any questions or suggestions, feel free to reach out to us at [contact@terrahacks.com](mailto:contact@terrahacks.com).
+
+---
+
+Thank you for being part of TerraHacks! Let's innovate and collaborate to make something amazing.
+
