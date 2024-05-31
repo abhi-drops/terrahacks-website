@@ -9,7 +9,7 @@ const openSans = Open_Sans({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://terrahacks.ca"),
+  metadataBase: new URL("https://dev.terrahacks.ca"),
   title: {
     default: "TerraHacks",
     template: "%s | TerraHacks",
