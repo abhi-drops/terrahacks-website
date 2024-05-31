@@ -4,21 +4,21 @@ import Navbar from "@/components/navbar/navbar";
 import Footer from "@/components/footer";
 import Top from "@/components/top";
 
-const openSans = Open_Sans({ 
-  subsets: ["latin"]
+const openSans = Open_Sans({
+  subsets: ["latin"],
 });
 
-
 export const metadata = {
-  metadataBase: new URL("https://terrahacks.ca"),
+  metadataBase: new URL("https://dev.terrahacks.ca"),
   title: {
     default: "TerraHacks",
     template: "%s | TerraHacks",
   },
-  description: "A student-run Hackathon for students to learn and apply their knowledge - Coming Summer 2024 at TMU!",
+  description:
+    "A student-run Hackathon for students to learn and apply their knowledge - Coming Summer 2024 at TMU!",
 };
 
-export default function RootLayout({ children }) {  
+export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={openSans.className}>
