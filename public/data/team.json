@@ -167,5 +167,19 @@
         "position": "Participant Facilitator",
         "committee": "Judging",
         "img": "zil.jpg"
+    }, 
+    {
+        "id": 25,
+        "name": "Fiona Vongsay",
+        "position": "Food Coordinator",
+        "committee": "Logistics and Ops",
+        "img": "fiona.png"
+    },
+    {
+        "id": 26,
+        "name": "Ira Magallenes",
+        "position": "Food Coordinator",
+        "committee": "Logistics and Ops",
+        "img": "ira.png"
     }
 ]
