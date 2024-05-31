@@ -10,7 +10,7 @@ export default function Home() {
     <main className="relative bg-phone-image pb-[140%] lg:bg-laptop-image 2xl:bg-full-image lg:pb-[575%] 2xl:pb-[400%] bg-cover bg-no-repeat bg-center flex-col">
       <Hero />
       <About />
-      {/* <Sponsors /> */}
+      <Sponsors />
       <FAQ />
       <Contact />
       <Team />

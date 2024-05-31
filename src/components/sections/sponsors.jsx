@@ -1,12 +1,40 @@
+"use client";
 import Image from "next/image";
 import Header from "@/components/header.jsx";
+import { useRef, useEffect } from "react";
 
 export default function Sponsors() {
+    const contentRef = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    contentRef.current.classList.add('float-in-section-visible');
+                }
+                else {
+                    contentRef.current.classList.remove('float-in-section-visible');
+                }
+            },
+            {
+                threshold: 0.2, // Trigger when 10% of the section is visible
+            }
+        );
+    
+        if (contentRef.current) {
+            observer.observe(contentRef.current);
+        }
+    
+        return () => {
+            if (contentRef.current) {
+                observer.unobserve(contentRef.current);
+            }
+        };
+    }, []);
+
     return (
-        <>
-            <div id="about" className="flex relative justify-center items-center bg-cover bg-center w-full h-auto max-h-screen bg-sponsor-section-mobile lg:bg-sponsor-section lg:pb-[57.5%]">
-                <Header title="Sponsors" />
-            </div>
-        </>
+        <div id="sponsors" ref={contentRef} className="hidden lg:flex flex-col justify-center items-center absolute top-[29.2%] 2xl:top-[28.5%] pl-[35%] pr-[23%] 2xl:pl-[38%] 2xl:pr-[27%] mx-auto w-full h-[8%] float-in-section">
+            <Header title="Our Sponsors" />
+        </div>
     );
 }

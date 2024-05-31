@@ -16,16 +16,16 @@
     {
         "id": 3, 
         "name": "Mo Nakouzi", 
-        "position": "Hacker Manager", 
+        "position": "Hackathon Manager", 
         "committee": "Admin", 
         "img": "mo.jpg"
     }, 
     {
-        "id": 4, 
-        "name": "Ashlin Fung",
-        "position": "Logistics Lead",
-        "committee": "Logistics and Ops",
-        "img": "ashlin.png"
+        "id": 4,
+        "name": "Hamid Khoramrokh",
+        "position": "Hackathon Advisor",
+        "committee": "Admin",
+        "img": "hamid.png"
     }, 
     {
         "id": 5, 
@@ -49,11 +49,12 @@
         "img": "benson.png"
     }, 
     {
-        "id": 8, 
-        "name": "Saadia Shahid", 
-        "position": "Website Developer", 
-        "committee": "Technology", 
-        "img": "saadia.png"
+        "id": 8,
+        "name": "Nicholas Caro Lopez",
+        "position": "Lead Developer",
+        "committee": "Technology",
+        "img": "nicholas.png" 
+
     }, 
     {
         "id": 9, 
@@ -65,14 +66,14 @@
     {
         "id": 10, 
         "name": "Ashwin Sundaresan", 
-        "position": "Budgeting Officer", 
+        "position": "Budgeting Coordinator", 
         "committee": "Finance and Sponsorships", 
         "img": "ashwin.jpg"
     }, 
     {
         "id": 11, 
         "name": "Andre Arcaina", 
-        "position": "Budgeting Officer", 
+        "position": "Budgeting Coordinator", 
         "committee": "Finance and Sponsorships", 
         "img": "andre.png"
     }, 
@@ -85,10 +86,10 @@
     }, 
     {
         "id": 13, 
-        "name": "Aaron Ha", 
-        "position": "Swag Coordinator", 
-        "committee": "Logistics and Ops", 
-        "img": "aaron.png"
+        "name": "Ashlin Fung",
+        "position": "Logistics Lead",
+        "committee": "Logistics and Ops",
+        "img": "ashlin.png"
     }, 
     {
         "id": 14, 
@@ -106,38 +107,38 @@
     },  
     {
         "id": 16, 
-        "name": "Beenish Saeed", 
-        "position": "Photographer", 
-        "committee": "Marketing", 
-        "img": "beenish.png"
-    },  
-    {
-        "id": 17, 
-        "name": "Amasha Malawiya Arachchige", 
-        "position": "Event Coordinator", 
-        "committee": "Logistics and Ops", 
-        "img": "amasha.png"
-    }, 
-    {
-        "id": 18, 
         "name": "Yuze Situ", 
-        "position": "Social Media Designer", 
+        "position": "Social Media Coordinator", 
         "committee": "Marketing", 
         "img": "yuze.png"
-    },
+    },  
     {
-        "id": 19,
-        "name": "Hamid Khoramrokh",
-        "position": "Hackathon Advisor",
-        "committee": "Admin",
-        "img": "hamid.png"
-    },
-    {
-        "id": 20,
+        "id": 17,
         "name": "Kai Adams", 
         "position": "Prize Coordinator", 
         "committee": "Logistics and Ops", 
         "img": "kai.png"
+    }, 
+    {
+        "id": 18, 
+        "name": "Krystal Zin",
+        "position": "Social Media Coordinator",
+        "committee": "Marketing",
+        "img": "krystal.png"    
+    },
+    {
+        "id": 19, 
+        "name": "Aaron Ha", 
+        "position": "Swag Coordinator", 
+        "committee": "Logistics and Ops", 
+        "img": "aaron.png"
+    },
+    {
+        "id": 20,
+        "name": "Amasha Arachchige", 
+        "position": "Event Coordinator", 
+        "committee": "Logistics and Ops", 
+        "img": "amasha.png"
     },
     {
         "id": 21,
@@ -148,17 +149,17 @@
     },
     {
         "id": 22,
-        "name": "Krystal Zin",
-        "position": "Social Media Coordinator",
-        "committee": "Marketing",
-        "img": "krystal.png"
+        "name": "Beenish Saeed", 
+        "position": "Photographer", 
+        "committee": "Marketing", 
+        "img": "beenish.png"
     },
     {
         "id": 23,
-        "name": "Nicholas Caro Lopez",
-        "position": "Lead Developer",
-        "committee": "Technology",
-        "img": "nicholas.png"
+        "name": "Saadia Shahid", 
+        "position": "Website Developer", 
+        "committee": "Technology", 
+        "img": "saadia.png"
     },
     {
         "id": 24,

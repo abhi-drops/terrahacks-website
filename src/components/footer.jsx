@@ -14,7 +14,7 @@ export default function Footer() {
                         <a href="https://www.instagram.com/terrahacks.tmu" target="_blank" className="hover:text-gray-300 ease-in-out duration-300">
                             <FaInstagram className="w-8 lg:w-10 xl:w-12 h-auto" />
                         </a>
-                        <a href="https://discord.gg/8hA54AGmZB" target="_blank" className="hover:text-gray-300 ease-in-out duration-300">
+                        <a href="https://discord.gg/982AkBQea7" target="_blank" className="hover:text-gray-300 ease-in-out duration-300">
                             <RiDiscordLine className="w-8 lg:w-10 xl:w-12 h-auto" />
                         </a>
                         <a href="https://www.linkedin.com/company/terrahacks" target="_blank" className="hover:text-gray-300 ease-in-out duration-300">

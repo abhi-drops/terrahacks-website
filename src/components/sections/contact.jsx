@@ -1,6 +1,5 @@
 "use client";
 import Header from "@/components/header";
-import Content from "@/components/content";
 import { FaRegEnvelope, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import { RiDiscordLine, RiTiktokLine } from "react-icons/ri";
 import { SiLinktree } from "react-icons/si";
@@ -36,10 +35,14 @@ export default function Contact() {
     }, []);
 
     return (
-        <div id="contact" ref={contentRef} className="hidden lg:flex flex-col justify-center items-center absolute top-[60%] xl:top-[71.8%] pl-[35%] pr-[18%] 2xl:pl-[42%] 2xl:pr-[27.5%] mx-auto w-full h-[8%] float-in-section">
+        <div id="contact" ref={contentRef} className="hidden lg:flex flex-col justify-center items-center absolute top-[60%] xl:top-[71%] 2xl:top-[71.8%] pl-[39%] pr-[21%] 2xl:pl-[42%] 2xl:pr-[27.5%] mx-auto w-full h-[8%] float-in-section">
             <Header title="Contact Us" />
-            <Content text="Reach out to <b>contact@terrahacks.ca</b> for any help or support, 
-            and please be sure to join the <b>TerraHacks Discord</b> community!" contact={true}/>
+            <p
+                className={`pt-8 2xl:pt-12 lg:text-lg xl:text-xl 3xl:text-3xl text-white`}
+            >
+                Reach out to <b>contact@terrahacks.ca</b> for any help or support,
+                and please be sure to join the <b>TerraHacks Discord</b> community!
+            </p>
             <div id="terrahacks-links" className="flex flex-row items-center justify-between w-full text-white  pt-2 mt-2 xl:mt-6 3xl:pt-4 3xl:mt-6">
                 <a href="mailto:contact@terrahacks.ca" target="_blank" className="hover:text-gray-300 ease-in-out duration-300">
                     <FaRegEnvelope className="lg:w-12 3xl:w-16 h-auto" />
@@ -47,7 +50,7 @@ export default function Contact() {
                 <a href="https://www.instagram.com/terrahacks.tmu" target="_blank" className="hover:text-gray-300 ease-in-out duration-300">
                     <FaInstagram className="lg:w-12 3xl:w-16 h-auto" />
                 </a>
-                <a href="https://discord.gg/8hA54AGmZB" target="_blank" className="hover:text-gray-300 ease-in-out duration-300">
+                <a href="https://discord.gg/982AkBQea7" target="_blank" className="hover:text-gray-300 ease-in-out duration-300">
                     <RiDiscordLine className="lg:w-12 3xl:w-16 h-auto" />
                 </a>
                 <a href="https://www.linkedin.com/company/terrahacks" target="_blank" className="hover:text-gray-300 ease-in-out duration-300">
