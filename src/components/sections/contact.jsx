@@ -9,6 +9,8 @@ export default function Contact() {
     const contentRef = useRef(null);
 
     useEffect(() => {
+        const currentContentRef = contentRef.current;
+
         const observer = new IntersectionObserver(
             ([entry]) => {
                 if (entry.isIntersecting) {
@@ -23,13 +25,13 @@ export default function Contact() {
             }
         );
 
-        if (contentRef.current) {
-            observer.observe(contentRef.current);
+        if (currentContentRef) {
+            observer.observe(currentContentRef);
         }
 
         return () => {
-            if (contentRef.current) {
-                observer.unobserve(contentRef.current);
+            if (currentContentRef) {
+                observer.unobserve(currentContentRef);
             }
         };
     }, []);

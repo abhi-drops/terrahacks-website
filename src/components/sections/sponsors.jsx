@@ -7,6 +7,7 @@ export default function Sponsors() {
     const contentRef = useRef(null);
 
     useEffect(() => {
+        const currentContentRef = contentRef.current;
         const observer = new IntersectionObserver(
             ([entry]) => {
                 if (entry.isIntersecting) {
@@ -21,13 +22,13 @@ export default function Sponsors() {
             }
         );
     
-        if (contentRef.current) {
-            observer.observe(contentRef.current);
+        if (currentContentRef) {
+            observer.observe(currentContentRef);
         }
     
         return () => {
-            if (contentRef.current) {
-                observer.unobserve(contentRef.current);
+            if (currentContentRef) {
+                observer.unobserve(currentContentRef);
             }
         };
     }, []);

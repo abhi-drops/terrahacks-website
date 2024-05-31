@@ -30,6 +30,7 @@ export default function Team() {
         }
         fetchData();
 
+        const currentContentRef = contentRef.current;
         const observer = new IntersectionObserver(
             ([entry]) => {
                 if (entry.isIntersecting) {
@@ -44,13 +45,13 @@ export default function Team() {
             }
         );
 
-        if (contentRef.current) {
-            observer.observe(contentRef.current);
+        if (currentContentRef) {
+            observer.observe(currentContentRef);
         }
 
         return () => {
-            if (contentRef.current) {
-                observer.unobserve(contentRef.current);
+            if (currentContentRef) {
+                observer.unobserve(currentContentRef);
             }
         };
     }, []);
@@ -74,7 +75,7 @@ export default function Team() {
                 slidesPerView={1}
                 navigation = {true}
                 scrollbar = {{draggable: true }}
-                autoplay={{ delay: 5000, disableOnInteraction: false }}
+                autoplay={{ delay: 10000, disableOnInteraction: false }}
                 loop={true}
                 className="main w-full mx-10 mt-10 flex items-center justify-center"
             >

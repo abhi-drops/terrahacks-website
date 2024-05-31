@@ -6,6 +6,8 @@ export default function About() {
     const contentRef = useRef(null);
 
     useEffect(() => {
+        const currentContentRef = contentRef.current;
+
         const observer = new IntersectionObserver(
             ([entry]) => {
                 if (entry.isIntersecting) {
@@ -25,8 +27,8 @@ export default function About() {
         }
 
         return () => {
-            if (contentRef.current) {
-                observer.unobserve(contentRef.current);
+            if (currentContentRef) {
+                observer.unobserve(currentContentRef);
             }
         };
     }, []);
@@ -40,7 +42,7 @@ export default function About() {
                 Formed from the passion of making tech opportunities open to all, TerraHacks was
                 created to provide an inclusive platform for everyone interested in technology to further their skills.
                 <br /> <br />
-                Over the 36-hour period, you'll collaborate with fellow participants, tackle intriguing challenges, and
+                Over the 36-hour period, you&apos;ll collaborate with fellow participants, tackle intriguing challenges, and
                 bring your ideas to life . Prepare to immerse yourself in a challenging, creative, and exciting weekend!
                 <br /> <br />
                 And lastly, no experience is required! This event is for anyone and everyone; regardless

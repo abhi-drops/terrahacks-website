@@ -20,6 +20,7 @@ export default function FAQ() {
         }
         fetchData();
 
+        const currentContentRef = contentRef.current;
         const observer = new IntersectionObserver(
             ([entry]) => {
                 if (entry.isIntersecting) {
@@ -34,13 +35,13 @@ export default function FAQ() {
             }
         );
 
-        if (contentRef.current) {
-            observer.observe(contentRef.current);
+        if (currentContentRef) {
+            observer.observe(currentContentRef);
         }
 
         return () => {
-            if (contentRef.current) {
-                observer.unobserve(contentRef.current);
+            if (currentContentRef) {
+                observer.unobserve(currentContentRef);
             }
         };
     }, []);
