@@ -49,7 +49,6 @@ export default function Sponsors() {
     return (
         <div id="sponsors" ref={contentRef} className="hidden lg:flex flex-col justify-center items-center absolute top-[32%] pl-[10%] pr-[10%] mx-auto w-full h-[18%] float-in-section">
             <Header title="Our Sponsors" />
-            {console.log(sponsors)}
             <div className="main grid grid-cols-4 grid-rows-4 gap-6 xl:gap-10 2xl:gap-12 items-center justify-center w-full h-full pt-10 2xl:pt-14">
                 {sponsors.map((sponsor, index) => {
                     return (
