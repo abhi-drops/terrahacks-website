@@ -36,7 +36,7 @@ export default function Contact() {
     }, []);
 
     return (
-        <div id="contact" ref={contentRef} className="hidden lg:flex flex-col justify-center items-center absolute top-[86.5%] pl-[20%] pr-[38%] 2xl:pl-[27%] 2xl:pr-[39%] mx-auto w-full h-[8%] float-in-section">
+        <div id="contact" ref={contentRef} className="hidden lg:flex flex-col justify-center items-center absolute top-[60%] xl:top-[71.8%] pl-[35%] pr-[18%] 2xl:pl-[42%] 2xl:pr-[27.5%] mx-auto w-full h-[8%] float-in-section">
             <Header title="Contact Us" />
             <Content text="Reach out to <b>contact@terrahacks.ca</b> for any help or support, 
             and please be sure to join the <b>TerraHacks Discord</b> community!" contact={true}/>

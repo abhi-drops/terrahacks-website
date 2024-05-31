@@ -33,7 +33,7 @@ export default function About() {
     }, []);
 
     return (
-        <div id="about" ref={contentRef} className="hidden lg:flex flex-col justify-center items-center absolute top-[27%] pl-[35%] pr-[23%] 2xl:pl-[39%] 2xl:pr-[27%] mx-auto w-full h-[8%] float-in-section">
+        <div id="about" ref={contentRef} className="hidden lg:flex flex-col justify-center items-center absolute top-[18.2%] 2xl:top-[17.5%] pl-[35%] pr-[23%] 2xl:pl-[39%] 2xl:pr-[27%] mx-auto w-full h-[8%] float-in-section">
             <Header title="About TerraHacks" />
             <Content text="Formed from the passion of making tech opportunities open to all, TerraHacks was 
             created to provide an inclusive platform for everyone interested in technology to further their skills.
