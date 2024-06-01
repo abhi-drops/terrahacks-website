@@ -41,6 +41,12 @@ To get started with this project, follow the steps below:
 
    Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+4. **Create a `.env.local` file in your project root:**
+
+   ```env
+   NEXT_PUBLIC_BASE_URL=https://terrahacks.ca
+   ```
+
 ## Usage
 
 ### Development
@@ -83,6 +89,7 @@ TerraHacks/
 ├── package.json      # Project dependencies and scripts
 ├── postcss.config.js # PostCSS configuration
 ├── README.md         # Project documentation
+├── .env.local        # Create this file as described above
 └── tailwind.config.js # Tailwind CSS configuration
 ```
 

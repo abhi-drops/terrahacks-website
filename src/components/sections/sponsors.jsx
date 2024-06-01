@@ -47,8 +47,17 @@ export default function Sponsors() {
     }, []);
 
     return (
-        <div id="sponsors" ref={contentRef} className="hidden lg:flex flex-col justify-center items-center absolute top-[32%] pl-[10%] pr-[10%] mx-auto w-full h-[18%] float-in-section">
+        <div id="sponsors" ref={contentRef} className="hidden lg:flex flex-col justify-center items-center absolute top-[33%] pl-[10%] pr-[10%] mx-auto w-full h-[18%] float-in-section">
             <Header title="Our Sponsors" />
+            <p className="text-center text-sm lg:text-lg xl:text-xl 2xl:text-2xl text-white mt-4 lg:mt-6 xl:mt-8 2xl:mt-10 pl-[10%] pr-[10%]">
+                We are grateful to our sponsors for their support; this event would not be possible without them! These contributions will help shape
+                an unforgettable experience for all our attendees. <br /> <br /> More sponsors will be added soon!
+            </p>
+            <button 
+            className="text-white text-sm lg:text-lg xl:text-xl 2xl:text-2xl mt-4 lg:mt-6 xl:mt-8 2xl:mt-10 bg-green-500 rounded-md shadow-md px-8 py-4 hover:scale-105 hover:bg-green-600 duration-300 ease-in-out"
+            onClick={() => window.open("/assets/mlh-conduct.pdf", "_blank")}>
+                Become a Sponsor!
+            </button>
             <div className="main grid grid-cols-4 grid-rows-4 gap-6 xl:gap-10 2xl:gap-12 items-center justify-center w-full h-full pt-10 2xl:pt-14">
                 {sponsors.map((sponsor, index) => {
                     return (
