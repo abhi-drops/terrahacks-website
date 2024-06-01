@@ -66,6 +66,7 @@ export default function Navbar() {
                     rounded
                     color="#fff"
                     size={28}
+                    ariaLabel={isExpandedMobile ? 'Close mobile menu' : 'Open mobile menu'}
                 />
                 {typeof document !== 'undefined' && (isExpandedMobile ? document.body.classList.add("overflow-hidden") : document.body.classList.remove("overflow-hidden"))}
                 {isExpandedMobile && (
