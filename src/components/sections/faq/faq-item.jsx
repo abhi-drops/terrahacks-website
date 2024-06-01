@@ -14,6 +14,7 @@ export default function FAQItem({ item }) {
     return (
         <li className="lg:text-sm xl:text-base w-full">
             <button
+                name="FAQ Item Button"
                 onClick={() => {
                     var elem = document.getElementById('faq').offsetTop;
                     window.scrollTo({ top: elem, behavior: "smooth" });
@@ -29,6 +30,7 @@ export default function FAQItem({ item }) {
             <div className={`fixed flex justify-center items-center top-0 left-0 h-screen w-screen bg-gray-900 bg-opacity-50 transition-opacity duration-500 ${isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
                 <div ref={contentRef} className={`relative flex flex-col items-center justify-center bg-white w-1/2 h-1/2 rounded-md shadow-md transition-transform transform ${isVisible ? 'scale-100' : 'scale-95'}`}>
                     <button
+                        name="Close FAQ Modal Button"
                         onClick={() => {
                             setVisible(false)
                         }}

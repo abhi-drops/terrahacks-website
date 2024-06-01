@@ -41,7 +41,9 @@ export default function Navbar() {
                         </li>
                         {navItems.map((item, index) => (
                             <li className="text-md lg:text-xl xl:text-2xl 2xl:text-2xl" key={index}>
-                                <button className="hover:text-brown-300 transition-colors duration-300"
+                                <button
+                                    name={`Navigate to ${item.label}`}
+                                    className="hover:text-brown-300 transition-colors duration-300"
                                     onClick={() => {
                                         var elem = document.getElementById(item.sectionId).offsetTop;
                                         window.scrollTo({ top: elem - 100, behavior: "smooth" });
@@ -70,7 +72,9 @@ export default function Navbar() {
                     <div id="mobile-nav-items" className="flex flex-col w-full absolute text-white space-y-4 gap-4 top-0 right-0 h-screen items-center mt-16 pt-8 backdrop-blur-mobile">
                         <PortalBtn />
                         {navItems.map((item, index) => (
-                            <button className="text-xl hover:text-brown-300 transition-colors duration-300" key={index}
+                            <button 
+                                name={`Navigate to ${item.label}`}
+                                className="text-xl hover:text-brown-300 transition-colors duration-300" key={index}
                                 onClick={() => {
                                     var elem = document.getElementById(item.sectionId).offsetTop;
                                     window.scrollTo({ top: elem - 100, behavior: "smooth" });

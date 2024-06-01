@@ -12,8 +12,8 @@ export default function Committee({ members, title }) {
                         <Image
                             src={`/assets/team/${member.img}`}
                             alt={member.name}
-                            width={1000}
-                            height={1000}
+                            width={500}
+                            height={500}
                             loading="lazy"
                             className="w-2/3 h-2/3 rounded-full object-cover object-center"
                         />
