@@ -59,21 +59,26 @@ export default function Navbar() {
             </nav>
             <nav id="mobile-nav" ref={ref} className={`flex lg:hidden flex-row w-full backdrop-blur-mobile text-white font-medium px-5 lg:px-10 py-3 fixed justify-between h-16 z-50`}>
                 <NavbarLogo />
-                <Hamburger
-                    toggled={isExpandedMobile}
-                    toggle={setIsExpandedMobile}
-                    duration={0.5}
-                    rounded
-                    color="#fff"
-                    size={28}
-                    ariaLabel={isExpandedMobile ? 'Close mobile menu' : 'Open mobile menu'}
-                />
+                <button
+                    onClick={() => setIsExpandedMobile(!isExpandedMobile)}
+                    aria-label={isExpandedMobile ? 'Close menu' : 'Open menu'}
+                    className="bg-transparent border-none p-0 cursor-pointer"
+                >
+                    <Hamburger
+                        toggled={isExpandedMobile}
+                        toggle={setIsExpandedMobile}
+                        duration={0.5}
+                        rounded
+                        color="#fff"
+                        size={28}
+                    />
+                </button>
                 {typeof document !== 'undefined' && (isExpandedMobile ? document.body.classList.add("overflow-hidden") : document.body.classList.remove("overflow-hidden"))}
                 {isExpandedMobile && (
                     <div id="mobile-nav-items" className="flex flex-col w-full absolute text-white space-y-4 gap-4 top-0 right-0 h-screen items-center mt-16 pt-8 backdrop-blur-mobile">
                         <PortalBtn />
                         {navItems.map((item, index) => (
-                            <button 
+                            <button
                                 aria-label={`Navigate to ${item.label}`}
                                 className="text-xl hover:text-brown-300 transition-colors duration-300" key={index}
                                 onClick={() => {
