@@ -4,7 +4,7 @@ export default function PortalBtn() {
             <button
                 className="bg-green-500 text-white font-semibold px-6 py-4 rounded-md shadow-md hover:bg-green-600 transition-colors duration-300"
                 onClick={() => {
-                    window.open("https://portal.terrahacks.ca", "_blank");
+                    window.open("https://portal.terrahacks.ca", "_blank", 'noopener noreferrer');
                 }}
             >
                 Application Portal

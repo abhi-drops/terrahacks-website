@@ -73,7 +73,7 @@ export default function Sponsors() {
                         <button
                             key={index}
                             className={`flex justify-center items-center ${sponsor.tier === "Platinum" ? 'col-span-2' : 'col-span-1 col-start-auto'} h-full w-full rounded-md shadow-md bg-white hover:scale-105 transition-transform duration-300 ease-in-out`}
-                            onClick={() => window.open(sponsor.link, "_blank")}
+                            onClick={() => window.open(sponsor.link, "_blank", 'noopener noreferrer')}
                         >
                             <Image
                                 src={`/assets/sponsors/${sponsor.logo}`}

@@ -11,11 +11,11 @@ const openSans = Open_Sans({
 export const metadata = {
   metadataBase: new URL(`${process.env.NEXT_PUBLIC_BASE_URL}`),
   title: {
-    default: "TerraHacks",
+    default: "TerraHacks - Summer 2024",
     template: "%s | TerraHacks",
   },
   description:
-    "A student-run Hackathon for students to learn and apply their knowledge - Coming Summer 2024 at TMU!",
+    "A student-run Hackathon for students to learn and apply their knowledge - Coming Summer 2024 in Downtown Toronto, on the Toronto Metropolitan University (TMU) campus!",
 };
 
 export default function RootLayout({ children }) {

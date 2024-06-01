@@ -4,8 +4,8 @@ export default function Hero() {
     return (
         <>
             {/* The hidden headers are for reader mode accessibility */}
-            <h1 className='opacity-0'>TerraHacks</h1>
-            <h2 className='opacity-0'>Hosted at Toronto Metropolitan University, August 2nd - August 4th</h2>
+            <h1 className='opacity-0 w-full text-3xl'>TerraHacks</h1>
+            <h2 className='opacity-0 w-3/4 text-xl'>Hosted at Toronto Metropolitan University, August 2nd - August 4th</h2>
             <Image
                 src="/assets/th_text.png"
                 alt='TerraHacks Text'

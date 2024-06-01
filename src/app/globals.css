@@ -72,11 +72,7 @@ body {
     animation: floatInAbout 1s ease-out forwards;
 }
 
-.fade-in {
-    transition: opacity 0.5s ease-in-out;
-    opacity: 0;
-}
-
-.fade-in.visible {
-    opacity: 1;
+.reverse {
+    unicode-bidi: bidi-override;
+    direction: rtl;
 }
