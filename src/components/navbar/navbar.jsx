@@ -4,10 +4,12 @@ import { Spin as Hamburger } from 'hamburger-react';
 import { useClickAway } from 'react-use';
 import NavbarLogo from "./navbar-logo";
 import PortalBtn from "./portal-btn";
+import { useRouter } from "next/navigation";
 
 export default function Navbar() {
     const [navItems, setNavItems] = useState([]);
     const [isExpandedMobile, setIsExpandedMobile] = useState(false);
+    const router = useRouter();
 
     useEffect(() => {
         const fetchData = async () => {
