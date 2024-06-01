@@ -26,7 +26,7 @@ export default function Hero() {
                 src="/assets/signs/sign-mobile.png"
                 alt="TerraHacks Sign"
                 width={1090}
-                height={730}
+                height={557}
                 priority={true}
                 className='absolute lg:hidden w-full mx-auto px-[10%] top-[7%] z-20'
             />

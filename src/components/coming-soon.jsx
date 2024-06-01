@@ -22,7 +22,7 @@ export default function ComingSoon({isVisible, setVisible}) {
         <div className={`fixed flex justify-center items-center top-0 left-0 h-screen w-screen bg-gray-900 bg-opacity-50 transition-opacity duration-500 ${isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'} z-[49]`}>
             <div ref={contentRef} className={`relative flex flex-col items-center justify-center bg-white w-1/2 h-1/2 rounded-md shadow-md transition-transform transform ${isVisible ? 'scale-100' : 'scale-95'} z-50`}>
                 <button
-                    name="Close Coming Soon Modal Button"
+                    aria-label="Close Coming Soon Modal Button"
                     onClick={() => {
                         setVisible(false)
                     }}

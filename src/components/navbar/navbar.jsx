@@ -42,7 +42,7 @@ export default function Navbar() {
                         {navItems.map((item, index) => (
                             <li className="text-md lg:text-xl xl:text-2xl 2xl:text-2xl" key={index}>
                                 <button
-                                    name={`Navigate to ${item.label}`}
+                                    aria-label={`Navigate to ${item.label}`}
                                     className="hover:text-brown-300 transition-colors duration-300"
                                     onClick={() => {
                                         var elem = document.getElementById(item.sectionId).offsetTop;
@@ -73,7 +73,7 @@ export default function Navbar() {
                         <PortalBtn />
                         {navItems.map((item, index) => (
                             <button 
-                                name={`Navigate to ${item.label}`}
+                                aria-label={`Navigate to ${item.label}`}
                                 className="text-xl hover:text-brown-300 transition-colors duration-300" key={index}
                                 onClick={() => {
                                     var elem = document.getElementById(item.sectionId).offsetTop;

@@ -3,7 +3,7 @@ import Image from 'next/image';
 export default function NavbarLogo() {
     return (
         <button 
-            name='TerraHacks Logo Button - Redirects to Home'
+            aria-label='TerraHacks Logo Button - Redirects to Home'
             onClick={() => {
                 document.scrollingElement.scrollTo({ top: 0, behavior: "smooth" });
             }}

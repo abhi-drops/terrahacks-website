@@ -57,7 +57,7 @@ export default function Sponsors() {
             </p>
             {typeof document !== 'undefined' && (isVisible ? document.body.classList.add("overflow-hidden") : document.body.classList.remove("overflow-hidden"))}
             <button
-                name="Become a Sponsor Button (Sponsorship Package coming soon)"
+                aria-label="Become a Sponsor Button (Sponsorship Package coming soon)"
                 className="text-white text-sm lg:text-lg xl:text-xl 2xl:text-2xl mt-4 lg:mt-6 xl:mt-8 2xl:mt-10 bg-green-600 rounded-md shadow-md px-8 py-4 hover:scale-105 hover:bg-green-600 duration-300 ease-in-out"
                 onClick={() => {
                     var elem = document.getElementById('sponsors').offsetTop;
@@ -72,7 +72,7 @@ export default function Sponsors() {
                 {sponsors.map((sponsor, index) => {
                     return (
                         <button
-                            name={`Link to ${sponsor.fullName}`}
+                            aria-label={`Link to ${sponsor.fullName}`}
                             key={index}
                             className={`flex justify-center items-center ${sponsor.tier === "Platinum" ? 'col-span-2' : 'col-span-1 col-start-auto'} h-full w-full rounded-md shadow-md bg-white hover:scale-105 transition-transform duration-300 ease-in-out`}
                             onClick={() => window.open(sponsor.link, "_blank", 'noopener noreferrer')}
