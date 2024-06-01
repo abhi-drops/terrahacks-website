@@ -19,9 +19,9 @@ export default function FAQItem({ item }) {
                     window.scrollTo({ top: elem, behavior: "smooth" });
                     setVisible(!isVisible);
                 }}
-                className="flex flex-row justify-between items-center w-full h-full text-left ease-in-out duration-300 hover:bg-gray-300 bg-[#FAFAFA] px-2 py-1 rounded-md shadow-md "
+                className="flex flex-row justify-between items-center w-full h-full text-left ease-in-out duration-300 hover:bg-gray-300 bg-[#FAFAFA] px-2 py-2 md:py-3 lg:py-1 rounded-md shadow-md "
             >
-                <p className="w-[85%]">{item.question}</p>
+                <p className="w-[85%] text-xs md:text-sm lg:text-base">{item.question}</p>
                 {isVisible ? <FaMinus className="w-[8%] h-auto" /> : <FaPlus className="w-[8%] h-auto" />}
             </button>
             {/* for scrolling  */}

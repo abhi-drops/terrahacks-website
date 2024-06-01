@@ -49,9 +49,9 @@ export default function Sponsors() {
     }, []);
 
     return (
-        <div id="sponsors" ref={contentRef} className="hidden lg:flex flex-col justify-center items-center absolute top-[33%] pl-[10%] pr-[10%] mx-auto w-full h-[18%] float-in-section">
+        <div id="sponsors" ref={contentRef} className="flex flex-col justify-center items-center absolute top-[36%] lg:top-[33%] pl-[3%] pr-[3%] lg:pl-[10%] lg:pr-[10%] mx-auto w-full h-[10%] lg:h-[18%] float-in-section">
             <Header title="Our Sponsors" />
-            <p className="text-center text-sm lg:text-lg xl:text-xl 2xl:text-2xl text-white mt-4 lg:mt-6 xl:mt-8 2xl:mt-10 pl-[10%] pr-[10%]">
+            <p className="text-center text-xs md:text-sm lg:text-lg xl:text-xl 2xl:text-2xl text-white mt-4 lg:mt-6 xl:mt-8 2xl:mt-10 lg:pl-[10%] lg:pr-[10%]">
                 We are grateful to our sponsors for their support; this event would not be possible without them! These contributions will help shape
                 an unforgettable experience for all our attendees. <br /> <br /> More sponsors will be added soon!
             </p>

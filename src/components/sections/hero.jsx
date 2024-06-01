@@ -12,7 +12,7 @@ export default function Hero() {
                 width={3000}
                 height={400}
                 priority={true}
-                className='absolute w-full mx-auto px-6 md:px-10 lg:px-36 xl:px-48 3xl:px-56 top-[20%] lg:top-[5%] xl:top-[3.5%] z-20 float-in'
+                className='absolute w-full mx-auto px-6 md:px-10 lg:px-36 xl:px-48 3xl:px-56 top-[4.5%] lg:top-[5%] xl:top-[3.5%] z-20 float-in'
             />
             <Image
                 src="/assets/signs/sign.png"
@@ -28,7 +28,7 @@ export default function Hero() {
                 width={1000}
                 height={1000}
                 priority={true}
-                className='absolute lg:hidden w-full mx-auto px-[10%] top-[35%] z-20'
+                className='absolute lg:hidden w-full mx-auto px-[10%] top-[7%] z-20'
             />
         </>
     )

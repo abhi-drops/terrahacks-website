@@ -47,9 +47,9 @@ export default function FAQ() {
     }, []);
 
     return (
-        <div id="faq" ref={contentRef} className="hidden lg:flex flex-col justify-center items-center absolute top-[55.7%] 2xl:top-[56.2%] pl-[17%] pr-[38%] 2xl:pl-[25%] 2xl:pr-[38%] mx-auto w-full h-[10%] float-in-section">
+        <div id="faq" ref={contentRef} className="flex flex-col justify-center items-center absolute top-[58.6%] lg:top-[55.7%] 2xl:top-[56.2%] pl-[17%] pr-[33%] lg:pl-[17%] lg:pr-[38%] 2xl:pl-[25%] 2xl:pr-[38%] mx-auto w-full h-[8%] lg:h-[10%] float-in-section">
             <Header title="FAQ" />
-            <ul className="text-left grid grid-cols-2 grid-rows-5 gap-x-3 gap-y-5 text-black font-medium pt-6">
+            <ul className="hidden text-left grid grid-cols-1 gap-y-3 lg:grid-cols-2 lg:grid-rows-5 lg:gap-x-3 lg:gap-y-5 text-black font-medium pt-6">
                 {questions.map((item, index) => (
                     <FAQItem item={item} key={index}/>
                 ))}

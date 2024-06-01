@@ -8,7 +8,7 @@ export default function NotFound() {
 
     useEffect(() => {
         router.replace("/");
-    }, []);
+    }, [router]);
 
     return (
         <div className="flex justify-center items-center h-screen w-screen text-lg lg:text-xl xl:text-2xl 2xl:text-3xl bg-black text-white">

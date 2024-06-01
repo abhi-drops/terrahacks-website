@@ -68,7 +68,7 @@ export default function Team() {
     const dayOf = filterByCommittee(team, "Day-of");
 
     return (
-        <div ref={contentRef} id="team" className="hidden lg:flex flex-col justify-center items-center absolute top-[85.8%] mx-auto w-full h-[13%] float-in-section">
+        <div ref={contentRef} id="team" className="flex flex-col justify-center items-center absolute top-[89%] lg:top-[85.8%] mx-auto w-full h-[9%] lg:h-[13%] float-in-section">
             <Header title="Meet the Team!" />
             <Swiper
                 modules={[Navigation, Pagination, Autoplay]}

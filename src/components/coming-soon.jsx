@@ -3,7 +3,7 @@ import { IoClose } from 'react-icons/io5';
 import { useState, useEffect, useRef } from 'react';
 import { useClickAway } from 'react-use';
 
-export default function comingSoon({isVisible, setVisible}) {
+export default function ComingSoon({isVisible, setVisible}) {
     const [dots, setDots] = useState(0);
     const contentRef = useRef(null);
     useClickAway(contentRef, () => {
