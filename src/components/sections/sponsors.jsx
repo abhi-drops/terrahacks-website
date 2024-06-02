@@ -49,11 +49,14 @@ export default function Sponsors() {
     }, []);
 
     return (
-        <div id="sponsors" ref={contentRef} className="flex flex-col justify-center items-center absolute top-[36%] lg:top-[33%] pl-[3%] pr-[3%] lg:pl-[10%] lg:pr-[10%] mx-auto w-full h-[10%] lg:h-[18%] float-in-section">
+        <div id="sponsors" ref={contentRef} className="flex flex-col justify-center items-center absolute top-[31%] md:top-[30%] lg:top-[33%] pl-[6%] pr-[5%] lg:pl-[10%] lg:pr-[10%] mx-auto w-full h-[10%] md:h-[14%] lg:h-[18%] float-in-section">
             <Header title="Our Sponsors" />
-            <p className="text-center text-xs md:text-sm lg:text-lg xl:text-xl 2xl:text-2xl text-white mt-4 lg:mt-6 xl:mt-8 2xl:mt-10 lg:pl-[10%] lg:pr-[10%]">
+            <p className="text-center leading-relaxed px-2 lg:leading-normal text-xs md:text-sm lg:text-lg xl:text-xl 2xl:text-2xl text-white mt-4 lg:mt-6 xl:mt-8 2xl:mt-10 lg:pl-[10%] lg:pr-[10%]">
                 We are grateful to our sponsors for their support; this event would not be possible without them! These contributions will help shape
-                an unforgettable experience for all our attendees. <br /> <br /> More sponsors will be added soon!
+                an unforgettable experience for all our attendees.
+            </p>
+            <p className="text-center leading-relaxed px-2 lg:leading-normal text-xs md:text-sm lg:text-lg xl:text-xl 2xl:text-2xl text-white mt-2 md:mt-4 lg:mt-6 xl:mt-8 2xl:mt-10 lg:pl-[10%] lg:pr-[10%]">
+                More sponsors will be added soon! Stay tuned!
             </p>
             {typeof document !== 'undefined' && (isVisible ? document.body.classList.add("overflow-hidden") : document.body.classList.remove("overflow-hidden"))}
             <button
@@ -68,7 +71,7 @@ export default function Sponsors() {
                 Become a Sponsor!
             </button>
             {isVisible && <ComingSoon isVisible={isVisible} setVisible={setVisible} />}
-            <div className="main grid grid-cols-4 grid-rows-4 gap-6 xl:gap-10 2xl:gap-12 items-center justify-center w-full h-full pt-10 2xl:pt-14">
+            <div className="main grid grid-cols-4 grid-rows-3 md:grid-rows-4 gap-2 md:gap-4 lg:gap-6 xl:gap-10 2xl:gap-12 items-center justify-center w-full pt-6 lg:pt-10 2xl:pt-14">
                 {sponsors.map((sponsor, index) => {
                     return (
                         <button

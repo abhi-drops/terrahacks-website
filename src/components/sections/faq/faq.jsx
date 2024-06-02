@@ -3,21 +3,32 @@ import { useRef, useEffect, useState } from "react";
 import Header from "@/components/header.jsx";
 import FAQItem from "./faq-item";
 
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+
+import '../swiper.css';
+
 export default function FAQ() {
     const contentRef = useRef(null);
+    const swiperRef = useRef(null);
     const [questions, setQuestions] = useState([]);
+    const [expanded, setExpanded] = useState(false);
 
     useEffect(() => {
         const fetchData = async () => {
             try {
                 const response = await fetch("/data/faq.json");
-                const data = await response.json()
+                const data = await response.json();
                 setQuestions(data);
-            }
-            catch (error) {
+            } catch (error) {
                 console.error("Failed to fetch FAQ questions: ", error);
             }
-        }
+        };
         fetchData();
 
         const currentContentRef = contentRef.current;
@@ -25,13 +36,12 @@ export default function FAQ() {
             ([entry]) => {
                 if (entry.isIntersecting) {
                     contentRef.current.classList.add('float-in-section-visible');
-                }
-                else {
+                } else {
                     contentRef.current.classList.remove('float-in-section-visible');
                 }
             },
             {
-                threshold: 0.2, // Trigger when 10% of the section is visible
+                threshold: 0.2, // Trigger when 20% of the section is visible
             }
         );
 
@@ -46,14 +56,64 @@ export default function FAQ() {
         };
     }, []);
 
+    useEffect(() => {
+        if (swiperRef.current) {
+            if (expanded) {
+                swiperRef.current.autoplay.stop();
+            } else {
+                swiperRef.current.autoplay.start();
+            }
+        }
+    }, [expanded]);
+
+    const pages = [
+        questions.slice(0, 2),
+        questions.slice(2, 4),
+        questions.slice(4, 6),
+        questions.slice(6, 8),
+        questions.slice(8, 10)
+    ]
+
+
+
     return (
-        <div id="faq" ref={contentRef} className="flex flex-col justify-center items-center absolute top-[58.6%] lg:top-[55.7%] 2xl:top-[56.2%] pl-[17%] pr-[33%] lg:pl-[17%] lg:pr-[38%] 2xl:pl-[25%] 2xl:pr-[38%] mx-auto w-full h-[8%] lg:h-[10%] float-in-section">
+        <div id="faq" ref={contentRef} className="flex flex-col justify-center items-center absolute top-[52.8%] lg:top-[55.7%] 2xl:top-[56.2%] pl-[19%] pr-[39%] lg:pl-[17%] lg:pr-[38%] 2xl:pl-[25%] 2xl:pr-[38%] mx-auto w-full h-[12%] lg:h-[10%] float-in-section">
             <Header title="FAQ" />
-            <ul className="text-left grid grid-cols-1 gap-y-3 lg:grid-cols-2 lg:grid-rows-5 lg:gap-x-3 lg:gap-y-5 text-black font-medium pt-6">
+            <ul className="hidden md:grid text-left grid-cols-1 gap-y-3 lg:grid-cols-2 lg:grid-rows-5 lg:gap-x-3 lg:gap-y-5 text-black font-medium pt-6">
                 {questions.map((item, index) => (
-                    <FAQItem item={item} key={index}/>
+                    <FAQItem item={item} key={index} expanded={expanded} setExpanded={setExpanded} />
                 ))}
             </ul>
+            <div className="block md:hidden w-full h-[80%]">
+                <Swiper
+                    modules={[Navigation, Pagination, Autoplay]}
+                    slidesPerView={1}
+                    spaceBetween={500}
+                    navigation
+                    pagination={{
+                        el: '.custom-swiper-pagination',
+                        type: 'custom',
+                        renderCustom: (swiper, current, total) => {
+                            return `${current} / ${total}`;
+                        },
+                    }}
+                    autoplay={{ delay: 5000 }}
+                    loop={true}
+                    onSwiper={(swiper) => { swiperRef.current = swiper; }}
+                    className="md:hidden w-full h-full flex flex-col justify-center items-center"
+                >
+                    {pages.map((page, pageIndex) => (
+                        <SwiperSlide key={pageIndex}>
+                            <ul className="grid grid-cols-1 h-full gap-y-3 text-black font-medium pt-6">
+                                {page.map((item, index) => (
+                                    <FAQItem item={item} key={index} expanded={expanded} setExpanded={setExpanded} />
+                                ))}
+                            </ul>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
+                <div className="custom-swiper-pagination flex justify-center items-center text-lg text-white"></div>
+            </div>
         </div>
     );
 }

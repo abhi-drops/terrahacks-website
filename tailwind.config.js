@@ -21,7 +21,7 @@ module.exports = {
       backgroundImage: {
         "full-image": "url('/assets/backgrounds/full-bg.webp')",
         "laptop-image": "url('/assets/backgrounds/laptop-bg.webp')",
-        "phone-image": "url('/assets/backgrounds/phone-bg.webp')",
+        "mobile-image": "url('/assets/backgrounds/mobile-bg.webp')",
 
         "hero-section": "url('/assets/backgrounds/intro.webp')",
         "hero-section-mobile": "url('/assets/backgrounds/intro-mobile.webp')",

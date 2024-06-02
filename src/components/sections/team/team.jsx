@@ -11,7 +11,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
-import './team.css'
+import '../swiper.css'
 
 export default function Team() {
     const [team, setTeam] = useState([]);

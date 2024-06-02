@@ -6,7 +6,7 @@
     }, 
     {
         "id" : 2, 
-        "question" : "📍 | Where is the event? Is it in person or virtual? Where can I park", 
+        "question" : "📍 | Where is the event? Is it in person or virtual? Where can I park?", 
         "answer": "The event is at Toronto Metropolitan University (TMU) campus in downtown Toronto! It'll be in-person, and TMU has plenty of parking available. More specifics will be disclosed closer to the hackathon."
     },
     {
