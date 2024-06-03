@@ -7,14 +7,24 @@ module.exports = {
   ],
   theme: {
     extend: {
+      animation: {
+        'spin-slow': 'spin 2s linear infinite',
+      },
+      screens: {
+        "3xl": "1920px",
+      },
       colors: {
         brown: {
           300: "#A4550A",
         },
       },
       backgroundImage: {
-        "hero-section": "url('/assets/backgrounds/intro.png')",
-        "hero-section-mobile": "url('/assets/backgrounds/intro-mobile.png')",
+        "full-image": "url('/assets/backgrounds/full-bg.webp')",
+        "laptop-image": "url('/assets/backgrounds/laptop-bg.webp')",
+        "mobile-image": "url('/assets/backgrounds/mobile-bg.webp')",
+
+        "hero-section": "url('/assets/backgrounds/intro.webp')",
+        "hero-section-mobile": "url('/assets/backgrounds/intro-mobile.webp')",
       },
     },
   },
