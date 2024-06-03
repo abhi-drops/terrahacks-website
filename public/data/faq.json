@@ -27,7 +27,7 @@
     {
         "id" : 6, 
         "question": "👾 | When can we start working on your project? Can I work on a project I've already started?", 
-        "answer" : "You cannot start coding until after the opening ceremony. You're welcome to brainstorm some ideas beforehand, but you can't start coding until the event officially starts. You can't work on a project you've already started either"
+        "answer" : "You cannot start coding until after the opening ceremony. You're welcome to brainstorm some ideas beforehand, but you can't start coding until the event officially starts. You can't work on a project you've already started either."
     }, 
     {
         "id" : 7, 
@@ -49,5 +49,4 @@
         "question" : "📧 | I've still got questions!",
         "answer" : "No worries! Just email us at contact@terrahacks.ca or join the discord community! We'll get back to you as soon as possible about any questions you may have."
     }
-
 ]
