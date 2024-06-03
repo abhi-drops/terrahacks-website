@@ -14,7 +14,6 @@ export default function Committee({ members, title }) {
                             alt={member.name}
                             width={500}
                             height={500}
-                            loading="lazy"
                             className="w-2/3 h-2/3 rounded-full object-cover object-center"
                         />
                         <h3 className="text-sm md:text-base lg:text-2xl font-bold text-center text-white mt-4">{member.name}</h3>

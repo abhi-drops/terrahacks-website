@@ -22,6 +22,17 @@ export default function Sponsors() {
         };
         fetchData();
 
+        const handleKeyDown = (event) => {
+            if (event.key === 'Escape') {
+                setVisible(false);
+            }
+        };
+
+        
+        if (typeof window !== 'undefined') {
+            window.addEventListener('keydown', handleKeyDown);
+        }
+
         const currentContentRef = contentRef.current;
         const observer = new IntersectionObserver(
             ([entry]) => {
@@ -45,6 +56,7 @@ export default function Sponsors() {
             if (currentContentRef) {
                 observer.unobserve(currentContentRef);
             }
+            window.removeEventListener('keydown', handleKeyDown);
         };
     }, []);
 
