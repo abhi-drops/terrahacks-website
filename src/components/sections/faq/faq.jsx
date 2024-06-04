@@ -17,14 +17,14 @@ import '../swiper.css';
 
 export default function FAQ() {
     const contentRef = useRef(null);
-    const swiperRef = useRef(null);
     const clickAwayRef = useRef(null);
-    
+
     const [questions, setQuestions] = useState([]);
     const [expanded, setExpanded] = useState(false);
     const [isVisible, setVisible] = useState(false);
     const [modalContent, setModalContent] = useState(null);
     const [isSmallScreen, setIsSmallScreen] = useState(false);
+    const [currentSlide, setCurrentSlide] = useState(0);
 
     useClickAway(clickAwayRef, () => {
         handleCloseModal();
@@ -79,16 +79,6 @@ export default function FAQ() {
         };
     }, []);
 
-    useEffect(() => {
-        if (swiperRef.current) {
-            if (expanded) {
-                swiperRef.current.autoplay.stop();
-            } else {
-                swiperRef.current.autoplay.start();
-            }
-        }
-    }, [expanded]);
-
     const pages = [
         questions.slice(0, 2),
         questions.slice(2, 4),
@@ -127,16 +117,9 @@ export default function FAQ() {
                             slidesPerView={1}
                             spaceBetween={500}
                             navigation
-                            pagination={{
-                                el: '.custom-swiper-pagination',
-                                type: 'custom',
-                                renderCustom: (swiper, current, total) => {
-                                    return `${current} / ${total}`;
-                                },
-                            }}
                             autoplay={{ delay: 5000 }}
                             loop={true}
-                            onSwiper={(swiper) => { swiperRef.current = swiper; }}
+                            onSlideChange={(swiper) => { setCurrentSlide(swiper.realIndex + 1); }}
                             className="md:hidden w-full h-full flex flex-col justify-center items-center"
                         >
                             {pages.map((page, pageIndex) => (
@@ -149,7 +132,8 @@ export default function FAQ() {
                                 </SwiperSlide>
                             ))}
                         </Swiper>
-                        <div className="custom-swiper-pagination flex justify-center items-center text-lg text-white"></div>
+                        {/* <div className="custom-swiper-pagination flex justify-center items-center text-lg text-white"></div> */}
+                        <div className="flex justify-center items-center text-lg text-white">{currentSlide} / 5</div>
                     </div>
                 )}
 
