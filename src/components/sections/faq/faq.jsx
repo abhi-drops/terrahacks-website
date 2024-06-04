@@ -19,6 +19,7 @@ export default function FAQ() {
     const contentRef = useRef(null);
     const swiperRef = useRef(null);
     const clickAwayRef = useRef(null);
+    
     const [questions, setQuestions] = useState([]);
     const [expanded, setExpanded] = useState(false);
     const [isVisible, setVisible] = useState(false);

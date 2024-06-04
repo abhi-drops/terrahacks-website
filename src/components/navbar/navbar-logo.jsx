@@ -15,7 +15,7 @@ export default function NavbarLogo() {
                 width={1000}
                 height={1000}
                 priority={true}
-                className="w-10 h-10 lg:w-16 lg:h-16 2xl:w-18 2xl:h-18 lg:hover:animate-spin-slow"
+                className="w-10 h-10 lg:w-16 lg:h-16 2xl:w-18 2xl:h-18 lg:hover:animate-spin-slow pointer-events-none"
             />
         </button>
     )
