@@ -34,7 +34,7 @@ export default function About() {
     }, []);
 
     return (
-        <div id="about" ref={contentRef} className="flex flex-col justify-center items-center absolute top-[13.6%] md:top-[13.8%] lg:top-[18.2%] 2xl:top-[17.5%] pl-[51%] pr-[8%] lg:pl-[35%] lg:pr-[23%] 2xl:pl-[39%] 2xl:pr-[27%] mx-auto w-full h-[9%] lg:h-[8%] float-in-section">
+        <div id="about" ref={contentRef} className="flex flex-col justify-center items-center absolute top-[13.6%] md:top-[13.8%] lg:top-[18.3%] 2xl:top-[17.7%] pl-[51%] pr-[8%] lg:pl-[35%] lg:pr-[23%] 2xl:pl-[39%] 2xl:pr-[27%] mx-auto w-full h-[9%] lg:h-[8%] float-in-section">
             <Header title="About TerraHacks" />
             <p
                 className={`hidden md:block pt-2 md:pt-4 lg:pt-8 2xl:pt-12 text-xs md:text-sm xl:text-base 3xl:text-lg text-white`}

@@ -17,12 +17,14 @@ import '../swiper.css';
 
 export default function FAQ() {
     const contentRef = useRef(null);
-    const swiperRef = useRef(null);
     const clickAwayRef = useRef(null);
+
     const [questions, setQuestions] = useState([]);
     const [expanded, setExpanded] = useState(false);
     const [isVisible, setVisible] = useState(false);
     const [modalContent, setModalContent] = useState(null);
+    const [isSmallScreen, setIsSmallScreen] = useState(false);
+    const [currentSlide, setCurrentSlide] = useState(0);
 
     useClickAway(clickAwayRef, () => {
         handleCloseModal();
@@ -39,6 +41,17 @@ export default function FAQ() {
             }
         };
         fetchData();
+
+        const handleKeyDown = (event) => {
+            if (event.key === 'Escape') {
+                handleCloseModal();
+            }
+        };
+
+        if (typeof window !== 'undefined') {
+            window.addEventListener('keydown', handleKeyDown);
+            setIsSmallScreen(window.innerWidth < 768);
+        }
 
         const currentContentRef = contentRef.current;
         const observer = new IntersectionObserver(
@@ -62,18 +75,9 @@ export default function FAQ() {
             if (currentContentRef) {
                 observer.unobserve(currentContentRef);
             }
+            window.removeEventListener('keydown', handleKeyDown);
         };
     }, []);
-
-    useEffect(() => {
-        if (swiperRef.current) {
-            if (expanded) {
-                swiperRef.current.autoplay.stop();
-            } else {
-                swiperRef.current.autoplay.start();
-            }
-        }
-    }, [expanded]);
 
     const pages = [
         questions.slice(0, 2),
@@ -82,9 +86,6 @@ export default function FAQ() {
         questions.slice(6, 8),
         questions.slice(8, 10)
     ];
-
-    // Loop variable to avoid warning in console
-    const loop = questions.length > 1;
 
     const handleOpenModal = (item) => {
         setModalContent(item);
@@ -109,36 +110,33 @@ export default function FAQ() {
                         <FAQItem item={item} key={index} onOpen={handleOpenModal} isVisible={isVisible} setVisible={setVisible} />
                     ))}
                 </ul>
-                <div className="block md:hidden w-full h-[80%]">
-                    <Swiper
-                        modules={[Navigation, Pagination, Autoplay]}
-                        slidesPerView={1}
-                        spaceBetween={500}
-                        navigation
-                        pagination={{
-                            el: '.custom-swiper-pagination',
-                            type: 'custom',
-                            renderCustom: (swiper, current, total) => {
-                                return `${current} / ${total}`;
-                            },
-                        }}
-                        autoplay={{ delay: 5000 }}
-                        loop={loop}
-                        onSwiper={(swiper) => { swiperRef.current = swiper; }}
-                        className="md:hidden w-full h-full flex flex-col justify-center items-center"
-                    >
-                        {pages.map((page, pageIndex) => (
-                            <SwiperSlide key={pageIndex}>
-                                <ul className="grid grid-cols-1 h-full gap-y-3 text-black font-medium pt-6">
-                                    {page.map((item, index) => (
-                                        <FAQItem item={item} key={index} onOpen={handleOpenModal} isVisible={isVisible} setVisible={setVisible} />
-                                    ))}
-                                </ul>
-                            </SwiperSlide>
-                        ))}
-                    </Swiper>
-                    <div className="custom-swiper-pagination flex justify-center items-center text-lg text-white"></div>
-                </div>
+                {isSmallScreen && (
+                    <div className="block md:hidden w-full h-[80%]">
+                        <Swiper
+                            modules={[Navigation, Pagination, Autoplay]}
+                            slidesPerView={1}
+                            spaceBetween={500}
+                            navigation
+                            autoplay={{ delay: 5000 }}
+                            loop={true}
+                            onSlideChange={(swiper) => { setCurrentSlide(swiper.realIndex + 1); }}
+                            className="md:hidden w-full h-full flex flex-col justify-center items-center"
+                        >
+                            {pages.map((page, pageIndex) => (
+                                <SwiperSlide key={pageIndex}>
+                                    <ul className="grid grid-cols-1 h-full gap-y-3 text-black font-medium pt-6">
+                                        {page.map((item, index) => (
+                                            <FAQItem item={item} key={index} onOpen={handleOpenModal} isVisible={isVisible} setVisible={setVisible} />
+                                        ))}
+                                    </ul>
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
+                        {/* <div className="custom-swiper-pagination flex justify-center items-center text-lg text-white"></div> */}
+                        <div className="flex justify-center items-center text-lg text-white">{currentSlide} / 5</div>
+                    </div>
+                )}
+
             </div>
             {modalContent && (
                 <div className="fixed inset-0 z-50 flex justify-center items-center bg-gray-900 bg-opacity-50 transition-opacity duration-500 opacity-100">
