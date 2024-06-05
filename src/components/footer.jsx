@@ -1,11 +1,21 @@
 import { FaRegEnvelope, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import { RiDiscordLine, RiTiktokLine } from "react-icons/ri";
 import { SiLinktree } from "react-icons/si";
+import Link from "next/link";
 
 export default function Footer() {
     return (
         <>
             <footer className="bg-[#0B0507] text-white py-12">
+                <div id="portal-btn" className="flex flex-row items-center mt-4 mb-6 w-full text-lg xl:text-xl 2xl:text-2xl">
+                    <Link
+                        aria-label="Button to Sign up for TerraHacks Newsletter"
+                        className="bg-green-600 text-white mx-auto font-medium px-6 py-4 text-center rounded-md shadow-md hover:bg-green-700 duration-300 hover:scale-105 ease-in-out"
+                        rel="noopener noreferrer" target="_blank" href="/newsletter"
+                    >
+                        Sign up for our newsletter!
+                    </Link>
+                </div>
                 <div className="main flex flex-col items-center justify-center space-y-6">
                     <div id="terrahacks-links" className="flex flex-row items-center justify-between w-[90%] md:w-[60%] lg:w-[40%] 2xl:w-[35%] text-white  pt-2 mt-2 xl:mt-6 3xl:pt-4 3xl:mt-6">
                         <a aria-label='Link to Email' rel='noopener noreferrer' href="mailto:contact@terrahacks.ca" target="_blank" className="hover:text-gray-300 ease-in-out duration-300">
@@ -27,7 +37,7 @@ export default function Footer() {
                             <SiLinktree className="w-8 md:w-10 xl:w-12 h-auto" />
                         </a>
                     </div>
-                    <div className="flex flex-col lg:flex-row items-center justify-center space-y-4 lg:space-x-12">
+                    <div className="flex flex-col lg:flex-row items-center justify-center space-y-4 lg:space-x-12 lg:space-y-0">
                         <a aria-label='Link to MLH Code of Conduct' rel='noopener noreferrer' href="/assets/mlh-conduct.pdf" target="_blank" className="md:text-lg lg:text-xl xl:text-2xl hover:text-gray-300 ease-in-out duration-300 underline">MLH Code of Conduct</a>
                         <a aria-label='Link to Sponsorship Package (Coming Soon)' rel='noopener noreferrer' href="#" target="_blank" className="md:text-lg lg:text-xl xl:text-2xl hover:text-gray-300 ease-in-out duration-300 underline pointer-events-none">Become a Sponsor (Coming Soon)</a>
                     </div>
