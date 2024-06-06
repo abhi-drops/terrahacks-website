@@ -11,7 +11,7 @@ export default function NotFound() {
     }, [router]);
 
     return (
-        <div className="flex justify-center items-center h-screen w-screen text-lg lg:text-xl xl:text-2xl 2xl:text-3xl bg-black text-white">
+        <div className="flex justify-center items-center h-screen w-screen text-lg lg:text-xl xl:text-2xl 2xl:text-3xl bg-black text-[#FAFAFA]">
             <AiOutlineLoading className="animate-spin w-20 h-20"/>
         </div>
     );

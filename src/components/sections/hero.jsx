@@ -7,7 +7,7 @@ export default function Hero() {
             <h1 className='opacity-0 w-full text-3xl'>TerraHacks</h1>
             <h2 className='opacity-0 w-3/4 text-xl'>Hosted at Toronto Metropolitan University, August 2nd - August 4th</h2>
             <Image
-                src="/assets/th_text.png"
+                src="/assets/th-text.png"
                 alt='TerraHacks Text'
                 width={1534}
                 height={227}

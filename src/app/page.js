@@ -7,7 +7,7 @@ import Team from "@/components/sections/team/team";
 
 export default function Home() {
   return (
-    <main className="relative bg-mobile-image pb-[816%] lg:bg-laptop-image 2xl:bg-full-image lg:pb-[575%] 2xl:pb-[400%] bg-cover bg-no-repeat bg-center flex-col">
+    <main className="relative bg-mobile-image lg:bg-laptop-image 2xl:bg-full-image pb-[816%] lg:pb-[575%] 2xl:pb-[400%] bg-cover bg-no-repeat bg-center">
       <Hero />
       <About />
       <Sponsors />

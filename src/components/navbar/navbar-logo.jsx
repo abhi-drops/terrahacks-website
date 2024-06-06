@@ -21,7 +21,7 @@ export default function NavbarLogo() {
             className='self-start lg:hover:animate-spin-slow'
         >
             <Image
-                src="/assets/th_logo.png"
+                src="/assets/th-logo.png"
                 alt="TerraHacks Logo - Redirects to Home"
                 width={1000}
                 height={1000}
