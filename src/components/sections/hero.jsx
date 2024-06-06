@@ -30,6 +30,16 @@ export default function Hero() {
                 priority={true}
                 className='absolute lg:hidden w-full mx-auto px-[10%] top-[5%] z-20 pointer-events-none'
             />
+            <div className="absolute w-[20%] 2xl:w-[17%] left-[-2%] lg:left-0 top-[9.2%] lg:top-[10.9%] 2xl:top-[9.8%]">
+                <Image
+                    src="/assets/moles/miner_mole.png"
+                    alt="TerraHacks Logo"
+                    width={1500}
+                    height={1500}
+                    priority={true}
+                    className="w-full scale-x-[-1]"
+                />
+            </div>
         </>
     )
 }

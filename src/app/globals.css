@@ -2,19 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-/* add color hex codes when picked */
-:root {
-    /* --background-color: #F5FAFA;
-    --foreground-color: #1E1E1E;
-    --highlight-color: #3E8989;
-    --highlight-dark-color: #002956; */
-}
-
-/* Set bg color and margins */
+/* Set margins and hide overflow */
 html {
-    /* background-color: var(--usstm-background); */
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 body {

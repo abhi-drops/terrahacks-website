@@ -102,6 +102,16 @@ export default function Sponsors() {
                     })}
                 </div>
             </div>
+            <div className="absolute w-[25%] 2xl:w-[17%] left-[77%] md:left-[72%] 2xl:left-[70%] top-[25.8%] md:top-[25.5%] lg:top-[27.6%] 2xl:top-[27.6%]">
+                <Image
+                    src="/assets/moles/suit_mole.png"
+                    alt="TerraHacks Logo"
+                    width={1500}
+                    height={1500}
+                    priority={true}
+                    className="w-full"
+                />
+            </div>
         </>
     );
 }
