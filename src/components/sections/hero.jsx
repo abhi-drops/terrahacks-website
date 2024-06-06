@@ -7,7 +7,7 @@ export default function Hero() {
             <h1 className='opacity-0 w-full text-3xl'>TerraHacks</h1>
             <h2 className='opacity-0 w-3/4 text-xl'>Hosted at Toronto Metropolitan University, August 2nd - August 4th</h2>
             <Image
-                src="/assets/th_text.png"
+                src="/assets/th-text.png"
                 alt='TerraHacks Text'
                 width={1534}
                 height={227}
@@ -30,6 +30,16 @@ export default function Hero() {
                 priority={true}
                 className='absolute lg:hidden w-full mx-auto px-[10%] top-[5%] z-20 pointer-events-none'
             />
+            <div className="absolute w-[20%] 2xl:w-[17%] left-[-2%] lg:left-0 top-[9.2%] lg:top-[10.9%] 2xl:top-[9.8%]">
+                <Image
+                    src="/assets/moles/miner_mole.png"
+                    alt="TerraHacks Logo"
+                    width={1500}
+                    height={1500}
+                    priority={true}
+                    className="w-full scale-x-[-1]"
+                />
+            </div>
         </>
     )
 }

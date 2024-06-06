@@ -23,8 +23,8 @@ module.exports = {
         "laptop-image": "url('/assets/backgrounds/laptop-bg.webp')",
         "mobile-image": "url('/assets/backgrounds/mobile-bg.webp')",
 
-        "hero-section": "url('/assets/backgrounds/intro.webp')",
-        "hero-section-mobile": "url('/assets/backgrounds/intro-mobile.webp')",
+        "newsletter": "url('/assets/backgrounds/team.png')",
+        "newsletter-mobile": "url('/assets/backgrounds/intro-mobile.webp')",
       },
     },
   },

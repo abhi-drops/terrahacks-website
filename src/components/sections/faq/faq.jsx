@@ -132,15 +132,15 @@ export default function FAQ() {
                                 </SwiperSlide>
                             ))}
                         </Swiper>
-                        {/* <div className="custom-swiper-pagination flex justify-center items-center text-lg text-white"></div> */}
-                        <div className="flex justify-center items-center text-lg text-white">{currentSlide} / 5</div>
+                        {/* <div className="custom-swiper-pagination flex justify-center items-center text-lg text-[#FAFAFA]"></div> */}
+                        <div className="flex justify-center items-center text-lg text-[#FAFAFA]">{currentSlide} / 5</div>
                     </div>
                 )}
 
             </div>
             {modalContent && (
                 <div className="fixed inset-0 z-50 flex justify-center items-center bg-gray-900 bg-opacity-50 transition-opacity duration-500 opacity-100">
-                    <div ref={clickAwayRef} className="relative flex flex-col items-center justify-center bg-white w-11/12 md:w-1/2 h-3/4 md:h-1/2 rounded-md shadow-md transition-transform transform scale-100">
+                    <div ref={clickAwayRef} className="relative flex flex-col items-center justify-center bg-[#FAFAFA] w-11/12 md:w-1/2 h-3/4 md:h-1/2 rounded-md shadow-md transition-transform transform scale-100">
                         <button
                             aria-label="Close FAQ Modal Button"
                             onClick={handleCloseModal}
