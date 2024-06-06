@@ -95,7 +95,7 @@ export default function Sponsors() {
                                     alt={sponsor.fullName}
                                     width={1000}
                                     height={1000}
-                                    className="object-contain w-full h-full"
+                                    className="object-contain w-full h-full pointer-events-none"
                                 />
                             </button>
                         );

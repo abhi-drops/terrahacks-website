@@ -15,7 +15,7 @@ export default function Committee({ members, title }) {
                             width={500}
                             height={500}
                             priority={true}
-                            className="w-2/3 h-2/3 rounded-full object-cover object-center"
+                            className="w-2/3 h-2/3 rounded-full object-cover object-center pointer-events-none"
                         />
                         <h3 className="text-sm md:text-base lg:text-2xl font-bold text-center text-white mt-4">{member.name}</h3>
                         <h4 className="text-xs md:text-sm lg:text-lg text-center text-white mt-2">{member.position}</h4>
