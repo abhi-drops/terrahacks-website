@@ -1,14 +1,17 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { stringify } from "postcss";
 import { useState, useEffect } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
+
+const SITE_KEY = "6Lfj-PIpAAAAAJWws4UUj0fGLNSi8nhmiAlGCE_k"; // Replace with your reCAPTCHA v2 site key
 
 export default function Newsletter() {
     const [isSubscribed, setSubscribed] = useState(false);
     const [errorMessage, setErrorMessage] = useState("");
     const [subscribing, setSubscribing] = useState(false);
     const [dots, setDots] = useState(0);
+    const [captchaValue, setCaptchaValue] = useState(null);
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -22,14 +25,25 @@ export default function Newsletter() {
         e.preventDefault();
         setSubscribing(true);
 
+        if (!captchaValue) {
+            setErrorMessage("Please complete the reCAPTCHA");
+            setSubscribing(false);
+            return;
+        }
+
         const form = document.getElementById('newsletter-form');
         const data = new FormData(form);
+        const formData = Object.fromEntries(data.entries());
+
+        // Append captcha value to formData
+        formData["g-recaptcha-response"] = captchaValue;
+
         const action = "https://script.google.com/macros/s/AKfycbzJZTjAAIyVqS8hz4xjDkf_bsme2En3hf6n5MxPmgwh64kj27Pej93ZEg-h6n-jo6bW/exec";
 
         try {
             const response = await fetch(action, {
                 method: 'POST',
-                body: data,
+                body: new URLSearchParams(formData),
             });
 
             const result = await response.json();
@@ -48,10 +62,14 @@ export default function Newsletter() {
                 document.getElementById('submit-newsletter').style.backgroundColor = '#E5E5E5';
             }
         } catch (error) {
-            console.error("Couldn't submit feedback form", error);
+            console.error("Couldn't submit form", error);
             setErrorMessage("An error occurred. Please try again.");
             setSubscribing(false);
         }
+    };
+
+    const onCaptchaChange = (value) => {
+        setCaptchaValue(value);
     };
 
     return (
@@ -111,6 +129,10 @@ export default function Newsletter() {
                         disabled={isSubscribed}
                         autoComplete="email"
                         required
+                    />
+                    <ReCAPTCHA
+                        sitekey={SITE_KEY}
+                        onChange={onCaptchaChange}
                     />
                     <button
                         id="submit-newsletter"
