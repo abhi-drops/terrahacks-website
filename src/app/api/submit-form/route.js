@@ -1,5 +1,3 @@
-import fetch from 'node-fetch';
-
 export async function POST(req) {
   const { captcha, formData } = await req.json();
 
