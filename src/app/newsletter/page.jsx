@@ -1,10 +1,58 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { stringify } from "postcss";
+import { useState, useEffect } from "react";
 
 export default function Newsletter() {
     const [isSubscribed, setSubscribed] = useState(false);
+    const [errorMessage, setErrorMessage] = useState("");
+    const [subscribing, setSubscribing] = useState(false);
+    const [dots, setDots] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setDots((prev) => (prev % 3) + 1); // Cycle through 1, 2, 3
+        }, 500); // Adjust the speed as needed
+
+        return () => clearInterval(interval); // Cleanup the interval on component unmount
+    }, []);
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setSubscribing(true);
+
+        const form = document.getElementById('newsletter-form');
+        const data = new FormData(form);
+        const action = "https://script.google.com/macros/s/AKfycbzJZTjAAIyVqS8hz4xjDkf_bsme2En3hf6n5MxPmgwh64kj27Pej93ZEg-h6n-jo6bW/exec";
+
+        try {
+            const response = await fetch(action, {
+                method: 'POST',
+                body: data,
+            });
+
+            const result = await response.json();
+            console.log("Server response:", result);
+
+            if (result.result === 'error') {
+                const errorMessage = typeof result.error === 'string'
+                    ? result.error
+                    : stringify(result.error);
+                setErrorMessage(`${errorMessage}, please contact us if you have any questions.`);
+                setSubscribing(false);
+            } else {
+                setSubscribed(true);
+                setErrorMessage("");
+                setSubscribing(false);
+                document.getElementById('submit-newsletter').style.backgroundColor = '#E5E5E5';
+            }
+        } catch (error) {
+            console.error("Couldn't submit feedback form", error);
+            setErrorMessage("An error occurred. Please try again.");
+            setSubscribing(false);
+        }
+    };
 
     return (
         <div className="relative bg-newsletter pb-[120%] md:pb-[74%] 2xl:pb-[65%] bg-cover bg-no-repeat bg-center flex flex-col items-center justify-center min-h-screen">
@@ -31,28 +79,8 @@ export default function Newsletter() {
                     id="newsletter-form"
                     className="flex flex-col items-center justify-center w-full space-y-5 xl:space-y-8"
                     method="POST"
-                    action="https://script.google.com/macros/s/AKfycbzk_zhV20emSKvJATmefAuA7ykpxhzvKzF02KlmSuG1Q0yYKu-KaLEp-hFcaeNEz8KP/exec"
-                    onSubmit={(e) => {
-                        e.preventDefault();
-                        document.getElementById('submit-newsletter').innerHTML = 'Subscribing...';
-                        setTimeout(() => {
-                            const form = document.getElementById('newsletter-form');
-                            const data = new FormData(form);
-                            const action = e.target.action;
-                            setSubscribed(true);
-                            document.getElementById('submit-newsletter').innerHTML = 'Subscribed!';
-                            document.getElementById('submit-newsletter').style.backgroundColor = '#E5E5E5';
-                            try {
-                                fetch(action, {
-                                    method: 'POST',
-                                    body: data,
-                                })
-                            }
-                            catch (error) {
-                                console.error("Couldn't submit feedback form", error);
-                            }
-                        }, 1000);
-                    }}
+                    action="#"
+                    onSubmit={handleSubmit}
                 >
                     <input
                         aria-label="Input to enter first name"
@@ -61,6 +89,8 @@ export default function Newsletter() {
                         placeholder="First Name"
                         className="w-full px-4 py-2 text-sm md:text-base lg:text-lg rounded-md shadow-md"
                         disabled={isSubscribed}
+                        autoComplete="given-name"
+                        required
                     />
                     <input
                         aria-label="Input to enter last name"
@@ -69,6 +99,8 @@ export default function Newsletter() {
                         placeholder="Last Name"
                         className="w-full px-4 py-2 text-sm md:text-base lg:text-lg rounded-md shadow-md"
                         disabled={isSubscribed}
+                        autoComplete="family-name"
+                        required
                     />
                     <input
                         aria-label="Input to enter email"
@@ -77,18 +109,27 @@ export default function Newsletter() {
                         placeholder="Email Address"
                         className="w-full px-4 py-2 text-sm md:text-base lg:text-lg rounded-md shadow-md"
                         disabled={isSubscribed}
+                        autoComplete="email"
+                        required
                     />
                     <button
                         id="submit-newsletter"
                         aria-label="Button to submit email"
                         type="submit"
                         className="bg-green-600 text-[#FAFAFA] text-sm md:text-base lg:text-lg px-6 py-2 rounded-md shadow-md hover:bg-green-700 duration-300 ease-in-out"
-                        disabled={isSubscribed}
+                        disabled={isSubscribed || subscribing}
                     >
-                        Subscribe
+                        {isSubscribed ? (
+                            'Subscribed'
+                        ) : subscribing ? (
+                            `Subscribing${'.'.repeat(dots)}`
+                        ) : (
+                            "Subscribe"
+                        )}
                     </button>
                 </form>
+                {errorMessage && <p className="text-red-600">{errorMessage}</p>}
             </div>
         </div>
-    )
+    );
 }
