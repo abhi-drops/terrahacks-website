@@ -110,7 +110,7 @@ export default function Team() {
                     <Committee members={Judging} title="Judging Support" />
                 </SwiperSlide>
             </Swiper>
-            <div className="absolute w-[90%] h-full mx-auto flex justify-center items-end mb-[15%] text-sm md:text-base lg:text-lg text-[#FAFAFA]">{currentSlide} / 6</div>
+            <div className="absolute w-[90%] h-full mx-auto flex justify-center items-end mb-[15%] text-sm md:text-base lg:text-lg text-[#FAFAFA]">{currentSlide} / 7 </div>
         </div>
     )
 }
