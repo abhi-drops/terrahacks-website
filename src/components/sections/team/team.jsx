@@ -67,6 +67,7 @@ export default function Team() {
     const sponsorship = filterByCommittee(team, "Finance and Sponsorships");
     const tech = filterByCommittee(team, "Technology");
     const dayOf = filterByCommittee(team, "Day-of");
+    const Judging = filterByCommittee(team, "Judging");
 
     return (
         <div ref={contentRef} id="team" className="flex flex-col justify-center items-center absolute top-[81.5%] pl-[6%] pr-[3%] pt-2 lg:pt-0 lg:pl-0 lg:pr-0 lg:top-[85.8%] mx-auto w-full h-[17%] lg:h-[13%] float-in-section">
@@ -103,6 +104,10 @@ export default function Team() {
 
                 <SwiperSlide>
                     <Committee members={dayOf} title="Day-Of" />
+                </SwiperSlide>
+
+                <SwiperSlide>
+                    <Committee members={Judging} title="Judging Support" />
                 </SwiperSlide>
             </Swiper>
             <div className="absolute w-[90%] h-full mx-auto flex justify-center items-end mb-[15%] text-sm md:text-base lg:text-lg text-[#FAFAFA]">{currentSlide} / 6</div>
