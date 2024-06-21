@@ -1,10 +1,58 @@
 [
+   {
+        "isEmpty" : true
+   },
     {
         "id": 1,
         "fullName": "Undergraduate Science Society of Toronto Metropolitan",
         "shortName": "USSTM",
-        "logo": "usstm.png",
-        "tier": "Platinum",
-        "link": "https://www.usstm.ca/"
+        "logo": "image.png",
+        "tier": "Tree",
+        "link": "https://www.usstm.ca/", 
+        "isEmpty" : false
+    },
+    {
+        "isEmpty" : true
+    },
+
+    {
+        "id": 2,
+        "fullName": "CS Department, TMU",
+        "shortName": "CS TMU",
+        "logo": "tmucs.png",
+        "tier": "Sprout",
+        "link": "https://www.torontomu.ca/cs/",
+        "isEmpty" : false
+
+    },
+    {
+        "id": 3,
+        "fullName": "1Password",
+        "shortName": "1Password",
+        "logo": "1password.png",
+        "tier": "Seedling",
+        "link": "https://1password.com/",
+        "isEmpty" : false
+
+    }, 
+    {
+        "id": 4,
+        "fullName": "Wolfram",
+        "shortName": "Wolfram",
+        "logo": "wolfram.png",
+        "tier": "Seedling",
+        "link": "https://www.wolfram.com/?source=nav",
+        "isEmpty" : false
+    },
+    {
+
+        "id": 5,
+        "fullName": "Kernels",
+        "shortName": "Kernels",
+        "logo": "kernels.png",
+        "tier": "Seedling",
+        "link": "https://www.kernelspopcorn.com/",
+        "isEmpty" : false
+        
     }
 ]
