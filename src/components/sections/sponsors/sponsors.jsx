@@ -81,25 +81,35 @@ export default function Sponsors() {
                 >
                     Become a Sponsor!
                 </a>
-                <div className="main max-h-[65%] md:max-h-[75%] grid grid-cols-4 grid-rows-4 gap-2 md:gap-4 lg:gap-6 xl:gap-10 2xl:gap-12 items-center justify-center w-full pt-6 lg:pt-10 2xl:pt-14">
+                <div className="main max-h-[65%] md:max-h-[75%] grid grid-cols-5 grid-rows-5 gap-2 md:gap-4 lg:gap-6 xl:gap-10 2xl:gap-12 items-center justify-center w-full pt-6 lg:pt-10 2xl:pt-14">
                     {sponsors.map((sponsor, index) => {
+                        
+                    if (sponsor.isEmpty){
                         return (
-                            <button
-                                aria-label={`Link to ${sponsor.fullName}`}
+                            <div
                                 key={index}
-                                className={`flex justify-center items-center ${sponsor.tier === "Platinum" ? 'col-span-2' : 'col-span-1 col-start-auto'} h-full w-full rounded-md shadow-md bg-[#FAFAFA] hover:scale-105 transition-transform duration-300 ease-in-out`}
-                                onClick={() => window.open(sponsor.link, "_blank", 'noopener noreferrer')}
-                            >
-                                <Image
-                                    src={`/assets/sponsors/${sponsor.logo}`}
-                                    alt={sponsor.fullName}
-                                    width={1000}
-                                    height={1000}
-                                    className="object-contain w-full h-full pointer-events-none"
-                                />
-                            </button>
-                        );
-                    })}
+                                className="col-span-1 h-full w-full rounded-md shadow-md bg-transparent"
+                            ></div>  );
+                    }else 
+                        {
+                            return (
+                                <button
+                                    aria-label={`Link to ${sponsor.fullName}`}
+                                    key={index}
+                                    className={`flex justify-center items-center ${sponsor.tier === "Tree" ? 'col-span-3' : 'col-span-1 col-start-auto'} ${sponsor.tier === "Sprout" ? 'col-span-2' : 'col-span-1 col-start-auto'} h-full w-full rounded-md shadow-md bg-[#FAFAFA] hover:scale-105 transition-transform duration-300 ease-in-out`}
+                                    onClick={() => window.open(sponsor.link, "_blank", 'noopener noreferrer')}
+                                >
+                                    <Image
+                                        src={`/assets/sponsors/${sponsor.logo}`}
+                                        alt={sponsor.fullName}
+                                        width={1000}
+                                        height={1000}
+                                        className="object-contain w-full h-full pointer-events-none"
+                                    />
+                                </button>
+                            );
+                        
+                        }})}
                 </div>
             </div>
             <div className="absolute w-[25%] 2xl:w-[17%] left-[77%] md:left-[72%] 2xl:left-[70%] top-[25.8%] md:top-[25.5%] lg:top-[27.6%] 2xl:top-[27.6%]">
