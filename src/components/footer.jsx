@@ -49,14 +49,14 @@ export default function Footer() {
                             MLH Code of Conduct
                         </a>
                         <a
-                            aria-label='Link to Sponsorship Package'
+                            aria-label='Link to Privacy Policy'
                             rel='noopener noreferrer'
-                            href="/assets/sponsorship-package.pdf"
+                            href="https://portal.terrahacks.ca/privacy-policy.pdf"
                             type="application/pdf"
                             target="_blank"
                             className="md:text-lg lg:text-xl xl:text-2xl hover:text-gray-300 ease-in-out duration-300 underline"
                         >
-                            Become a Sponsor
+                            Privacy Policy
                         </a>
                     </div>
                     <p className="md:text-lg lg:text-xl xl:text-2xl font-medium py-4 lg:py-8">Copyright © 2024 TerraHacks</p>
