@@ -102,9 +102,9 @@ export default function Sponsors() {
                                     <Image
                                         src={`/assets/sponsors/${sponsor.logo}`}
                                         alt={sponsor.fullName}
-                                        width={1000}
-                                        height={1000}
-                                        className="object-contain w-full h-full pointer-events-none"
+                                        width={500}
+                                        height={500}
+                                        className={`object-contain w-full h-full pointer-events-none ${sponsor.shortName === 'CS TMU' && 'py-2 rounded-md'}`}
                                     />
                                 </button>
                             );
