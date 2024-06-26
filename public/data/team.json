@@ -174,5 +174,12 @@
         "position": "Food Coordinator",
         "committee": "Logistics and Ops",
         "img": "ira.webp"
+    },
+    {
+        "id": 26,
+        "name": "Sana Mahmood", 
+        "position": "Judging Facilitator",
+        "committee": "Day-of",
+        "img": "sana.webp"
     }
 ]
