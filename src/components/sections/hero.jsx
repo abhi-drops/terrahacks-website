@@ -1,27 +1,6 @@
-"use client";
-import { useEffect } from 'react';
 import Image from 'next/image';
-import { isWebView } from '@/utils/detectWebView';
 
 export default function Hero() {
-    useEffect(() => {
-        if (isWebView()) {
-            const url = process.env.NEXT_PUBLIC_BASE_URL;
-
-            if (/Android/.test(navigator.userAgent)) {
-                // Use intent URL for Android
-                window.location.href = `intent://${url.replace('https://', '')}#Intent;scheme=https;package=com.android.chrome;end;`;
-            } else if (/iPhone|iPod|iPad/.test(navigator.userAgent)) {
-                // Use window.open for iOS
-                window.open(url, '_blank');
-                window.location.href = 'about:blank'; // This is to close the webview after opening the URL in the browser
-            } else {
-                // Fallback for other platforms
-                window.location.href = url;
-            }
-        }
-    }, []);
-
     return (
         <>
             {/* The hidden headers are for reader mode accessibility */}
