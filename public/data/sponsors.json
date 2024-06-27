@@ -1,7 +1,7 @@
 [
-   {
+    {
         "isEmpty" : true
-   },
+    },
     {
         "id": 1,
         "fullName": "Undergraduate Science Society of Toronto Metropolitan",
@@ -17,7 +17,7 @@
 
     {
         "id": 2,
-        "fullName": "CS Department, TMU",
+        "fullName": "TMU CS Department",
         "shortName": "CS TMU",
         "logo": "tmucs.png",
         "tier": "Sprout",
@@ -53,6 +53,5 @@
         "tier": "Seedling",
         "link": "https://www.kernelspopcorn.com/",
         "isEmpty" : false
-        
     }
 ]

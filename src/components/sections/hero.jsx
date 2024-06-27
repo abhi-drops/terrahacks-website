@@ -14,6 +14,20 @@ export default function Hero() {
                 priority={true}
                 className='absolute w-full mx-auto px-6 md:px-10 lg:px-36 xl:px-48 3xl:px-56 top-[2.5%] md:top-[2%] lg:top-[5%] xl:top-[3.5%] z-20 float-in pointer-events-none'
             />
+            <div className='flex flex-col gap-1 lg:gap-4 items-center justify-center text-center text-xs md:text-lg lg:text-2xl xl:text-4xl text-[#1E1E1E] font-semibold absolute w-full mx-auto px-6 md:px-10 lg:px-36 xl:px-48 3xl:px-56 top-[8.5%] md:top-[8.5%] lg:top-[7.5%] xl:top-[6.5%] z-20 float-in'>
+                <p className=''>
+                    Applications now open until July 25th, 11:59 PM!
+                </p>
+                <a
+                    aria-label='Apply to TerraHacks 2024'
+                    href='https://portal.terrahacks.ca/dashboard/application'
+                    rel='noopener noreferrer'
+                    target='_blank'
+                    className='bg-[#FAFAFA] hover:bg-gray-200 p-2 lg:p-4 rounded-md shadow-md ease-in-out duration-300 text-sm md:text-lg lg:text-2xl xl:text-4xl'
+                >
+                    Apply here!
+                </a>
+            </div>
             <Image
                 src="/assets/signs/sign.png"
                 alt="TerraHacks Sign"
@@ -28,7 +42,7 @@ export default function Hero() {
                 width={1090}
                 height={557}
                 priority={true}
-                className='absolute lg:hidden w-full mx-auto px-[10%] top-[5%] z-20 pointer-events-none'
+                className='absolute lg:hidden w-full mx-auto px-[15%] top-[4.2%] z-20 pointer-events-none'
             />
             <div className="absolute w-[20%] 2xl:w-[17%] left-[-2%] lg:left-0 top-[9.2%] lg:top-[10.9%] 2xl:top-[9.8%]">
                 <Image

@@ -103,7 +103,7 @@ export default function Team() {
                 </SwiperSlide>
 
                 <SwiperSlide>
-                    <Committee members={dayOf} title="Day-Of" />
+                    <Committee members={dayOf} title="Day-Of and Judging" />
                 </SwiperSlide>
 
                 {/* <SwiperSlide>
