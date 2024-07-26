@@ -38,7 +38,7 @@ export default function Footer() {
                         </a>
                     </div>
                     <div className="flex flex-col lg:flex-row items-center justify-center space-y-4 lg:space-x-12 lg:space-y-0">
-                        <a
+                        {/* <a
                             aria-label='Link to MLH Code of Conduct'
                             rel='noopener noreferrer'
                             href="/assets/mlh-conduct.pdf"
@@ -47,7 +47,7 @@ export default function Footer() {
                             className="md:text-lg lg:text-xl xl:text-2xl hover:text-gray-300 ease-in-out duration-300 underline"
                         >
                             MLH Code of Conduct
-                        </a>
+                        </a> */}
                         <a
                             aria-label='Link to Privacy Policy'
                             rel='noopener noreferrer'
