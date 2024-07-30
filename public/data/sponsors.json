@@ -9,64 +9,7 @@
         "isEmpty" : false
     },
     {
-        "isEmpty" : true
-    },
-    {
         "id": 2,
-        "fullName": "National Defence",
-        "shortName": "Armed Forces",
-        "logo": "armedForces.png",
-        "tier": "Sprout",
-        "link": "https://www.canada.ca/en/department-national-defence/programs/defence-ideas.html",
-        "isEmpty" : false
-    },
-    {
-        "id": 3,
-        "fullName": "Wolfram",
-        "shortName": "Wolfram",
-        "logo": "wolfram.png",
-        "tier": "Seedling",
-        "link": "https://www.wolfram.com/?source=nav",
-        "isEmpty" : false
-    },
-    {
-        "id": 4,
-        "fullName": "Undergraduate Science Society of Toronto Metropolitan",
-        "shortName": "USSTM",
-        "logo": "usstm.png",
-        "tier": "Tree",
-        "link": "https://www.usstm.ca/", 
-        "isEmpty" : false
-    },
-    {
-        "id": 5,
-        "fullName": "1Password",
-        "shortName": "1Password",
-        "logo": "1password.png",
-        "tier": "Seedling",
-        "link": "https://1password.com/",
-        "isEmpty" : false
-    }, 
-    {
-        "id": 6,
-        "fullName": "The KapCo",
-        "shortName": "KapCo",
-        "logo": "kapco.png",
-        "tier": "Seedling",
-        "link": "https://www.thekapco.com/",
-        "isEmpty" : false
-    },
-    {
-        "id": 7,
-        "fullName": "Ashkeebs",
-        "shortName": "Ashkeebs",
-        "logo": "ashkeebs.png",
-        "tier": "Seedling",
-        "link": "https://www.ashkeebs.com/",
-        "isEmpty" : false
-    },
-    {
-        "id": 8,
         "fullName": "Dean's Office",
         "shortName": "FoS",
         "logo": "dean.png",
@@ -75,7 +18,70 @@
         "isEmpty" : false
     },
     {
+        "id": 3,
+        "fullName": "National Defence",
+        "shortName": "Armed Forces",
+        "logo": "armedForces.png",
+        "tier": "Sprout",
+        "link": "https://www.canada.ca/en/department-national-defence/programs/defence-ideas.html",
+        "isEmpty" : false
+    },
+    {
+        "id": 4,
+        "fullName": "Wolfram",
+        "shortName": "Wolfram",
+        "logo": "wolfram.png",
+        "tier": "Seedling",
+        "link": "https://www.wolfram.com/?source=nav",
+        "isEmpty" : false
+    },
+    {
+        "id": 5,
+        "fullName": "Undergraduate Science Society of Toronto Metropolitan",
+        "shortName": "USSTM",
+        "logo": "usstm.png",
+        "tier": "Tree",
+        "link": "https://www.usstm.ca/", 
+        "isEmpty" : false
+    },
+    {
+        "id": 6,
+        "fullName": "1Password",
+        "shortName": "1Password",
+        "logo": "1password.png",
+        "tier": "Seedling",
+        "link": "https://1password.com/",
+        "isEmpty" : false
+    }, 
+    {
+        "id": 7,
+        "fullName": "The KapCo",
+        "shortName": "KapCo",
+        "logo": "kapco.png",
+        "tier": "Seedling",
+        "link": "https://www.thekapco.com/",
+        "isEmpty" : false
+    },
+    {
+        "id": 8,
+        "fullName": "Ashkeebs",
+        "shortName": "Ashkeebs",
+        "logo": "ashkeebs.png",
+        "tier": "Seedling",
+        "link": "https://www.ashkeebs.com/",
+        "isEmpty" : false
+    },
+    {
         "id": 9,
+        "fullName": "Echo3D",
+        "shortName": "echo3d",
+        "logo": "echo3d.png",
+        "tier": "Seedling",
+        "link": "https://www.echo3d.com/",
+        "isEmpty" : false
+    },
+    {
+        "id": 10,
         "fullName": "Cunsolo's 3D Printing",
         "shortName": "Cunsolo 3D",
         "logo": "cunsolo3d.png",
@@ -84,7 +90,7 @@
         "isEmpty" : false
     },
     {
-        "id": 10,
+        "id": 11,
         "fullName": "Kernels",
         "shortName": "Kernels",
         "logo": "kernels.png",
