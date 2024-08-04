@@ -97,5 +97,14 @@
         "tier": "Seedling",
         "link": "https://www.kernelspopcorn.com/",
         "isEmpty" : false
+    },
+    {
+        "id": 12,
+        "fullName": "Metropolitan Undergraduate Engineering Society",
+        "shortName": "MUES",
+        "logo": "mues.png",
+        "tier": "Seedling",
+        "link": "https://mues.ca/",
+        "isEmpty" : false
     }
 ]
